@@ -4,7 +4,7 @@ import Icon from './Icon.jsx';
 
 export default function Course({ completed = [], lastLesson }) {
   const [expanded, setExpanded] = useState(null);
-  const resume = findLesson(lastLesson) || lessons.find(lesson => !completed.includes(lesson.id)) || lessons[0];
+  const resume = (!completed.includes(lastLesson) && findLesson(lastLesson)) || lessons.find(lesson => !completed.includes(lesson.id)) || lessons[0];
   const allDone = completed.length === lessons.length;
   return <>
     <header className="page-intro">
@@ -34,7 +34,7 @@ export default function Course({ completed = [], lastLesson }) {
             <span className="module-meta">{count ? `${count} of 8 complete` : '8 lessons'}<Icon name={count === 8 ? 'check' : 'arrow'} className={open ? 'rotate' : ''} /></span>
           </button>
           {open && <div id={`module-${module.id}`} className="module-lessons">
-            {module.lessons.map((lesson, index) => <a href={`#/lesson/${lesson.id}`} key={lesson.id}><span className={`lesson-dot ${completed.includes(lesson.id) ? 'done' : ''}`}>{completed.includes(lesson.id) ? <Icon name="check" /> : index + 1}</span><span>{lesson.title}</span><small>{lesson.minutes} min</small><Icon name="arrow" /></a>)}
+            {module.lessons.map((lesson, index) => <a href={`#/lesson/${lesson.id}`} key={lesson.id}><span className={`lesson-dot ${completed.includes(lesson.id) ? 'done' : ''}`}>{completed.includes(lesson.id) ? <><Icon name="check" /><span className="sr-only">Completed: </span></> : index + 1}</span><span>{lesson.title}</span><small>{lesson.minutes} min</small><Icon name="arrow" /></a>)}
           </div>}
         </div>;
       })}
