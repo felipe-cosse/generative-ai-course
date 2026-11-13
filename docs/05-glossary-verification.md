@@ -11,3 +11,13 @@ Removed broad discovery phrases from aliases where they were not equivalent conc
 Validation: all 28 automated tests passed with `SOURCE_ARCHIVE` set, including 217-entry inventory parity, complete content, collision-free aliases, related/lesson reference integrity, all 84 original concept records, and existing progress/storage tests. Production build passed. Existing course browser smoke test passed in isolated headless Chrome at 1440 × 1000 with no console warnings/errors; the glossary interface is delivered in the following step.
 
 Browser tooling: the Browser plugin skill is not available in this session. Used the existing local Playwright installation with installed Chrome in an isolated temporary profile. No new project dependencies were installed.
+
+## Step 9 — glossary library
+
+Branch: `codex/09-glossary-library`.
+
+Added navigation, 217 expandable entries, acronym/alias/definition search, category/module/A–Z filters, related terms and lessons, primary sources, stable entry routes, and invalid-entry recovery. Direct entry navigation focuses the entry heading. Search and filter selections remain available when returning from a term.
+
+Validation: 30 portable tests passed with the optional source-archive check skipped; production build passed. The static glossary adds approximately 73 kB gzip to the application. Vite reports a non-blocking chunk-size advisory for the combined bundle; no dependency was added.
+
+Headless Chrome checks passed at 1440 × 1000 and 375 × 812: page identity, meaningful content, no framework overlay, no console warnings/errors, acronym ranking, expanded explanations, permanent and related links, direct-entry focus, combined filters, empty results, invalid IDs, mobile navigation, and no horizontal overflow. Browser testing identified unclear implicit filter labeling; explicit label associations were added and verified. Screenshots were captured outside the repository in `/tmp/fieldwork-glossary-desktop.png` and `/tmp/fieldwork-glossary-mobile.png`.

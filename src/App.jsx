@@ -6,6 +6,7 @@ import Lesson from "./components/Lesson.jsx";
 import ToolGuide from "./components/ToolGuide.jsx";
 import Playbook from "./components/Playbook.jsx";
 import Icon from "./components/Icon.jsx";
+import Glossary from "./components/Glossary.jsx";
 
 export default function App() {
   const [loaded] = useState(() => readState());
@@ -95,24 +96,32 @@ export default function App() {
       ? "tools"
       : page === "playbook" && !id
         ? "playbook"
-        : !page && (!hash || hash === "#/")
-          ? "course"
-          : "missing";
+        : page === "glossary" && !extra
+          ? "glossary"
+          : !page && (!hash || hash === "#/")
+            ? "course"
+            : "missing";
   const title = lesson
     ? findModule(id).title
     : active === "tools"
       ? "Tool guide"
       : active === "playbook"
         ? "My playbook"
-        : active === "missing"
-          ? "Page not found"
-          : "My learning";
+        : active === "glossary"
+          ? "Glossary"
+          : active === "missing"
+            ? "Page not found"
+            : "My learning";
   const completed = lessons
     .filter((item) => state.scores[item.id] === item.quiz.length)
     .map((item) => item.id);
   useEffect(() => {
     document.title = `${title} — Fieldwork`;
-    document.getElementById("main")?.focus({ preventScroll: true });
+    const focusTarget =
+      active === "glossary" && id
+        ? document.querySelector(".glossary-detail-page h1")
+        : document.getElementById("main");
+    focusTarget?.focus({ preventScroll: true });
   }, [hash, title]);
   useEffect(() => {
     if (lesson && state.lastLesson !== lesson.id)
@@ -172,6 +181,14 @@ export default function App() {
           >
             <Icon name="layers" />
             Tool guide
+          </a>
+          <a
+            href="#/glossary"
+            onClick={onNav}
+            aria-current={active === "glossary" ? "page" : undefined}
+          >
+            <Icon name="book" />
+            Glossary
           </a>
           <a
             href="#/playbook"
@@ -252,6 +269,7 @@ export default function App() {
             />
           )}
           {active === "tools" && <ToolGuide />}
+          {active === "glossary" && <Glossary id={id} />}
           {active === "playbook" && (
             <Playbook
               notes={state.notes}
