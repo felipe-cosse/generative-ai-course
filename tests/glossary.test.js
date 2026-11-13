@@ -53,3 +53,12 @@ test("every lesson exposes its complete term list in alphabetic order", () => {
     );
   }
 });
+
+test("short acronym searches do not match unrelated word fragments", () => {
+  const rag = searchGlossary({ query: "RAG" }).map((entry) => entry.id);
+  assert.ok(rag.includes("retrieval-augmented-generation"));
+  assert.ok(rag.includes("ragas"));
+  assert.ok(!rag.includes("media-compression"));
+  assert.equal(searchGlossary({ query: "faith" })[0].id, "faithfulness");
+  assert.deepEqual(searchGlossary({ query: "[" }), []);
+});

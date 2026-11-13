@@ -1,6 +1,6 @@
 # Glossary and in-lesson definitions: implementation plan
 
-Status: planning only. The glossary feature and its full definition catalog have not been implemented. Continue the existing workflow: one branch per delivery step, verification, then a merge into local main.
+Status: implemented. All 217 entries, glossary browsing, and lesson definitions are delivered through the branches below. See the [verification record](05-glossary-verification.md) and [coverage audit](glossary-coverage.md) for evidence, editorial decisions, and testing limits. This document preserves the original implementation plan; final coverage uses reviewed aliases rather than every discovery phrase in the candidate inventory.
 
 ## 1. Intended result
 

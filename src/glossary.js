@@ -29,6 +29,16 @@ export function searchGlossary({
   letter = "",
 } = {}) {
   const needle = normalize(query);
+  // Short searches such as RAG must not match unrelated words such as storage.
+  const shortWord =
+    needle && needle.length <= 3
+      ? new RegExp(
+          `(?<![\\p{L}\\p{M}\\p{N}_])${escapePattern(needle)}(?![\\p{L}\\p{M}\\p{N}_])`,
+          "u",
+        )
+      : null;
+  const contains = (text) =>
+    shortWord ? shortWord.test(text) : text.includes(needle);
   return searchIndex
     .flatMap((item) => {
       if (
@@ -42,9 +52,9 @@ export function searchGlossary({
           ? 0
           : item.names.some((name) => name.startsWith(needle))
             ? 1
-            : item.names.some((name) => name.includes(needle))
+            : item.names.some(contains)
               ? 2
-              : item.definition.includes(needle)
+              : contains(item.definition)
                 ? 3
                 : -1;
       return rank < 0 ? [] : [{ entry: item.entry, rank }];
