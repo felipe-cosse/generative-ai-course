@@ -6,27 +6,27 @@ All 19 numbered directories were inventoried and representative Markdown read. T
 
 ## Source inventory and coverage
 
-| Source folder | Management lesson |
-|---|---|
-| 1 - Introduction to Generative AI Foundations | 1. What changes when AI can create? |
-| 2 - Generative AI Overview | 1. What changes when AI can create? |
-| 4 - Applications of Generative AI | 1. What changes when AI can create? |
-| 5 - Introduction to Foundation Models | 2. One model, many jobs |
-| 6 - Building Applications using Foundation Models | 2. One model, many jobs |
-| 7 - How Generative AI Works | 3. How a model learns and generates |
-| 8 - Evaluating Generative AI Models | 4. Evidence before enthusiasm |
-| 9 - Implementing Evaluations for Generative AI Models | 4. Evidence before enthusiasm |
-| 10 - Neural Networks and Multilayer Perceptrons | 5. Learning systems need accountable owners |
-| 11 - Implementing Neural Networks using Pytorch | 5. Learning systems need accountable owners |
-| 12 - Model Interpretability and Ethics | 5. Learning systems need accountable owners |
-| 13 - Generating Text using LLMs | 6. Give AI a useful brief |
-| 14 - Role-Based Prompting | 6. Give AI a useful brief |
-| 15 - Implementing Role-Based Prompting with Python | 6. Give AI a useful brief |
-| 16 - Adapting Foundation Models | 7. Prompt, retrieve, or fine-tune? |
-| 17 - Applying PEFT on Foundation Models | 7. Prompt, retrieve, or fine-tune? |
-| 18 - Post-Training Foundation Models | 8. Reward the outcome you actually want |
-| 19 - Reinforcement Fine-tuning on Foundation Models | 8. Reward the outcome you actually want |
-| 20 - Teaching an LLM to Count! | 8. Reward the outcome you actually want |
+| Source folder                                         | Management lesson                           |
+| ----------------------------------------------------- | ------------------------------------------- |
+| 1 - Introduction to Generative AI Foundations         | 1. What changes when AI can create?         |
+| 2 - Generative AI Overview                            | 1. What changes when AI can create?         |
+| 4 - Applications of Generative AI                     | 1. What changes when AI can create?         |
+| 5 - Introduction to Foundation Models                 | 2. One model, many jobs                     |
+| 6 - Building Applications using Foundation Models     | 2. One model, many jobs                     |
+| 7 - How Generative AI Works                           | 3. How a model learns and generates         |
+| 8 - Evaluating Generative AI Models                   | 4. Evidence before enthusiasm               |
+| 9 - Implementing Evaluations for Generative AI Models | 4. Evidence before enthusiasm               |
+| 10 - Neural Networks and Multilayer Perceptrons       | 5. Learning systems need accountable owners |
+| 11 - Implementing Neural Networks using Pytorch       | 5. Learning systems need accountable owners |
+| 12 - Model Interpretability and Ethics                | 5. Learning systems need accountable owners |
+| 13 - Generating Text using LLMs                       | 6. Give AI a useful brief                   |
+| 14 - Role-Based Prompting                             | 6. Give AI a useful brief                   |
+| 15 - Implementing Role-Based Prompting with Python    | 6. Give AI a useful brief                   |
+| 16 - Adapting Foundation Models                       | 7. Prompt, retrieve, or fine-tune?          |
+| 17 - Applying PEFT on Foundation Models               | 7. Prompt, retrieve, or fine-tune?          |
+| 18 - Post-Training Foundation Models                  | 8. Reward the outcome you actually want     |
+| 19 - Reinforcement Fine-tuning on Foundation Models   | 8. Reward the outcome you actually want     |
+| 20 - Teaching an LLM to Count!                        | 8. Reward the outcome you actually want     |
 
 ## 1. What changes when AI can create?
 

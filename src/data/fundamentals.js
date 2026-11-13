@@ -1,386 +1,1267 @@
 export default {
-  id: 'fundamentals',
+  id: "fundamentals",
   number: 1,
-  title: 'Generative AI fundamentals',
-  shortTitle: 'Fundamentals',
-  description: 'Build your foundation. From possibility to practical judgment.',
-  image: '/images/fundamentals.png',
-  sourceRoot: '1 - Generative AI Fundamentals',
+  title: "Generative AI fundamentals",
+  shortTitle: "Fundamentals",
+  description: "Build your foundation. From possibility to practical judgment.",
+  image: "/images/fundamentals.png",
+  sourceRoot: "1 - Generative AI Fundamentals",
   lessons: [
     {
-      id: 'f1',
-      title: 'What generative AI changes',
+      id: "f1",
+      title: "What generative AI changes",
       minutes: 12,
-      outcome: 'Choose a useful first AI opportunity and explain where human judgment belongs.',
+      outcome:
+        "Choose a useful first AI opportunity and explain where human judgment belongs.",
       sections: [
-        { heading: 'From predicting to creating', body: `Artificial intelligence is a broad family of methods for tasks such as recognition, prediction, and decision support. Machine learning finds patterns in examples; deep learning uses layered neural networks. Generative AI uses learned patterns to produce candidate content: a paragraph, image, voice, video, or software draft. Compare predicting next month's demand with drafting a summary of this month's results. Both can use AI, but they solve different problems. The boundary is about the task, not a permanent division between products. A generative model can also classify a message when instructed to choose a category.` },
-        { heading: 'Treat the output as a proposal', body: `A model can write an articulate answer without having reliable evidence for every claim. It may invent a source, miss an important exception, or reproduce a bias found in its training data. This does not make every use unsuitable. It changes how you design the workflow. Give the model a bounded job, provide approved information, and decide who checks the result before anyone relies on it. Generated media needs similar care: a realistic image is not proof that an event occurred, and a convincing voice does not establish the speaker's identity. Review provenance, permission, and business context.` },
-        { heading: 'Start with a decision you can measure', body: `Good early opportunities are frequent, useful, and easy to review. Drafting product descriptions or summarizing approved meeting notes can have a clear owner and an observable quality standard. Letting a model authorize refunds without oversight adds a different level of consequence. Write down the existing process before changing it: time spent, common errors, review effort, and who is affected. Then define what a successful pilot would improve without making another measure worse. Time saved is only valuable if corrections and downstream problems do not consume it. Keep a human escalation route and a way to return to the existing process.` },
+        {
+          heading: "From predicting to creating",
+          body: `Artificial intelligence is a broad family of methods for tasks such as recognition, prediction, and decision support. Machine learning finds patterns in examples; deep learning uses layered neural networks. Generative AI uses learned patterns to produce candidate content: a paragraph, image, voice, video, or software draft. Compare predicting next month's demand with drafting a summary of this month's results. Both can use AI, but they solve different problems. The boundary is about the task, not a permanent division between products. A generative model can also classify a message when instructed to choose a category.`,
+        },
+        {
+          heading: "Treat the output as a proposal",
+          body: `A model can write an articulate answer without having reliable evidence for every claim. It may invent a source, miss an important exception, or reproduce a bias found in its training data. This does not make every use unsuitable. It changes how you design the workflow. Give the model a bounded job, provide approved information, and decide who checks the result before anyone relies on it. Generated media needs similar care: a realistic image is not proof that an event occurred, and a convincing voice does not establish the speaker's identity. Review provenance, permission, and business context.`,
+        },
+        {
+          heading: "Start with a decision you can measure",
+          body: `Good early opportunities are frequent, useful, and easy to review. Drafting product descriptions or summarizing approved meeting notes can have a clear owner and an observable quality standard. Letting a model authorize refunds without oversight adds a different level of consequence. Write down the existing process before changing it: time spent, common errors, review effort, and who is affected. Then define what a successful pilot would improve without making another measure worse. Time saved is only valuable if corrections and downstream problems do not consume it. Keep a human escalation route and a way to return to the existing process.`,
+        },
       ],
       concepts: [
-        { term: 'Generative AI', explanation: 'AI that produces candidate content using patterns learned from data.' },
-        { term: 'Hallucination', explanation: 'A plausible generated statement that is unsupported or incorrect.' },
-        { term: 'Human review', explanation: 'A named person checks an output before it affects a customer or business decision.' },
+        {
+          term: "Generative AI",
+          explanation:
+            "AI that produces candidate content using patterns learned from data.",
+        },
+        {
+          term: "Hallucination",
+          explanation:
+            "A plausible generated statement that is unsupported or incorrect.",
+        },
+        {
+          term: "Human review",
+          explanation:
+            "A named person checks an output before it affects a customer or business decision.",
+        },
       ],
-      visual: { title: 'A useful draft is one step in a workflow', caption: 'Generation creates possibilities. Review turns an acceptable possibility into an approved output.', steps: [
-        { label: 'Business need', detail: 'Name the job and its owner.' },
-        { label: 'Approved inputs', detail: 'Supply relevant facts and constraints.' },
-        { label: 'AI draft', detail: 'Generate a candidate response.' },
-        { label: 'Human review', detail: 'Verify facts, tone, and permissions.' },
-        { label: 'Measured use', detail: 'Track outcomes and corrections.' },
-      ] },
+      visual: {
+        title: "A useful draft is one step in a workflow",
+        caption:
+          "Generation creates possibilities. Review turns an acceptable possibility into an approved output.",
+        steps: [
+          { label: "Business need", detail: "Name the job and its owner." },
+          {
+            label: "Approved inputs",
+            detail: "Supply relevant facts and constraints.",
+          },
+          { label: "AI draft", detail: "Generate a candidate response." },
+          {
+            label: "Human review",
+            detail: "Verify facts, tone, and permissions.",
+          },
+          { label: "Measured use", detail: "Track outcomes and corrections." },
+        ],
+      },
       tools: [
-        { name: 'ChatGPT, Claude, and Gemini', role: 'Examples of assistants used to draft, summarize, and explore ideas; assess the specific product and organizational settings before use.' },
-        { name: 'ElevenLabs', role: 'An example of an audio-generation tool category. Voice projects also need consent, rights review, and quality checks.' },
+        {
+          name: "ChatGPT, Claude, and Gemini",
+          role: "Examples of assistants used to draft, summarize, and explore ideas; assess the specific product and organizational settings before use.",
+        },
+        {
+          name: "ElevenLabs",
+          role: "An example of an audio-generation tool category. Voice projects also need consent, rights review, and quality checks.",
+        },
       ],
-      example: { title: 'A smaller first pilot', context: 'Fictional retailer Northstar receives repeated questions about deliveries. Managers spend time drafting similar response templates.', decision: 'Use approved delivery policy to draft templates, with a service lead checking each template before publication.', result: 'The pilot can compare drafting time and correction rates with the existing workflow. No improvement is assumed before measurement.' },
-      activity: { title: 'Choose the first pilot', prompt: 'Northstar has two weeks and one reviewer. Which task is the strongest first generative-AI pilot?', options: [
-        { label: 'Draft delivery responses for approval', feedback: 'Best fit: the task is bounded, the source is available, and a reviewer can check the result before use.' },
-        { label: 'Approve every refund automatically', feedback: 'This adds financial consequences and policy exceptions. Establish reliable decision controls before granting that authority.' },
-        { label: 'Replace demand forecasting without comparison', feedback: 'Forecasting is a different task, and replacing a baseline without measuring performance removes the evidence needed to decide.' },
-      ], best: 0 },
+      example: {
+        title: "A smaller first pilot",
+        context:
+          "Fictional retailer Northstar receives repeated questions about deliveries. Managers spend time drafting similar response templates.",
+        decision:
+          "Use approved delivery policy to draft templates, with a service lead checking each template before publication.",
+        result:
+          "The pilot can compare drafting time and correction rates with the existing workflow. No improvement is assumed before measurement.",
+      },
+      activity: {
+        title: "Choose the first pilot",
+        prompt:
+          "Northstar has two weeks and one reviewer. Which task is the strongest first generative-AI pilot?",
+        options: [
+          {
+            label: "Draft delivery responses for approval",
+            feedback:
+              "Best fit: the task is bounded, the source is available, and a reviewer can check the result before use.",
+          },
+          {
+            label: "Approve every refund automatically",
+            feedback:
+              "This adds financial consequences and policy exceptions. Establish reliable decision controls before granting that authority.",
+          },
+          {
+            label: "Replace demand forecasting without comparison",
+            feedback:
+              "Forecasting is a different task, and replacing a baseline without measuring performance removes the evidence needed to decide.",
+          },
+        ],
+        best: 0,
+      },
       quiz: [
-        { question: 'A team wants to draft campaign headlines. What makes this a generative-AI task?', options: ['It produces candidate content from a brief.', 'It guarantees that a campaign will succeed.', 'It removes the need for brand review.'], answer: 0, explanation: 'Generation creates possible content. Commercial success and brand suitability still require assessment.' },
-        { question: 'An AI summary is confident but contradicts the source. What should you conclude?', options: ['Confidence proves expertise.', 'Fluency and factual reliability are different.', 'A longer prompt always fixes the issue.'], answer: 1, explanation: 'A polished response can still be wrong. Check claims against the source and improve the workflow using the failure.' },
+        {
+          question:
+            "A team wants to draft campaign headlines. What makes this a generative-AI task?",
+          options: [
+            "It produces candidate content from a brief.",
+            "It guarantees that a campaign will succeed.",
+            "It removes the need for brand review.",
+          ],
+          answer: 0,
+          explanation:
+            "Generation creates possible content. Commercial success and brand suitability still require assessment.",
+        },
+        {
+          question:
+            "An AI summary is confident but contradicts the source. What should you conclude?",
+          options: [
+            "Confidence proves expertise.",
+            "Fluency and factual reliability are different.",
+            "A longer prompt always fixes the issue.",
+          ],
+          answer: 1,
+          explanation:
+            "A polished response can still be wrong. Check claims against the source and improve the workflow using the failure.",
+        },
       ],
-      takeaway: 'Choose a bounded job, an accountable reviewer, and a measurable outcome before choosing a tool.',
-      reflection: 'Which recurring task on your team produces a draft that someone can reliably check?',
+      takeaway:
+        "Choose a bounded job, an accountable reviewer, and a measurable outcome before choosing a tool.",
+      reflection:
+        "Which recurring task on your team produces a draft that someone can reliably check?",
       sourceSections: [1, 2, 4],
       sources: [
-        { label: 'Course introduction', path: '1 - Generative AI Fundamentals/1 - Introduction to Generative AI Foundations/Course Introduction - Summary.md' },
-        { label: 'Generative AI overview', path: '1 - Generative AI Fundamentals/2 - Generative AI Overview/What is Generative AI? - Summary.md' },
-        { label: 'Capabilities and concerns', path: '1 - Generative AI Fundamentals/2 - Generative AI Overview/GenAI Capabilities and Concerns - Summary.md' },
-        { label: 'Real-world applications', path: '1 - Generative AI Fundamentals/4 - Applications of Generative AI/Real World Applications of Generative AI - Summary.md' },
+        {
+          label: "Course introduction",
+          path: "1 - Generative AI Fundamentals/1 - Introduction to Generative AI Foundations/Course Introduction - Summary.md",
+        },
+        {
+          label: "Generative AI overview",
+          path: "1 - Generative AI Fundamentals/2 - Generative AI Overview/What is Generative AI? - Summary.md",
+        },
+        {
+          label: "Capabilities and concerns",
+          path: "1 - Generative AI Fundamentals/2 - Generative AI Overview/GenAI Capabilities and Concerns - Summary.md",
+        },
+        {
+          label: "Real-world applications",
+          path: "1 - Generative AI Fundamentals/4 - Applications of Generative AI/Real World Applications of Generative AI - Summary.md",
+        },
       ],
     },
     {
-      id: 'f2',
-      title: 'One model, many jobs',
+      id: "f2",
+      title: "One model, many jobs",
       minutes: 12,
-      outcome: 'Distinguish a foundation model from the application and data around it.',
+      outcome:
+        "Distinguish a foundation model from the application and data around it.",
       sections: [
-        { heading: 'The reusable capability underneath', body: `A foundation model is trained on broad collections of examples so that its learned capabilities can support many tasks. Instead of creating a new model for every department, teams can adapt an existing one to summarize, classify, or draft. Training data may include books, websites, conversations, and other material, depending on the model. Its coverage is uneven: a strong result in one language or domain does not establish equal performance elsewhere. Broad training is also not a live connection to your organization. A model does not automatically know today's approved policy or the contents of a private system.` },
-        { heading: 'The model is not the whole product', body: `An AI application combines a model with instructions, a user interface, data connections, access controls, and sometimes external tools. Two applications using the same model can behave very differently because the surrounding system differs. Hosted products handle much of the infrastructure, but managers still need to understand data handling and permissions. Open-weight models make their learned parameters available under specified terms; operating one brings hosting, licensing review, evaluation, and maintenance work. Open weights do not automatically mean unrestricted use or full visibility into training data. Compare the complete operating arrangement, rather than deciding from a model name alone.` },
-        { heading: 'Give the model a clear task', body: `You can often begin with instructions rather than additional training. A zero-shot prompt defines the task without showing examples. A few-shot prompt adds several demonstrations of the desired response. For message routing, specify the allowed categories, explain each one, and include an example of an ambiguous message that should go to a person. Those examples guide the current request; they do not permanently retrain the model. Test whether they help on fresh cases. Watch for examples that accidentally exclude a customer group or teach the wrong shortcut. A clearer brief is useful only if the resulting decisions become more reliable.` },
+        {
+          heading: "The reusable capability underneath",
+          body: `A foundation model is trained on broad collections of examples so that its learned capabilities can support many tasks. Instead of creating a new model for every department, teams can adapt an existing one to summarize, classify, or draft. Training data may include books, websites, conversations, and other material, depending on the model. Its coverage is uneven: a strong result in one language or domain does not establish equal performance elsewhere. Broad training is also not a live connection to your organization. A model does not automatically know today's approved policy or the contents of a private system.`,
+        },
+        {
+          heading: "The model is not the whole product",
+          body: `An AI application combines a model with instructions, a user interface, data connections, access controls, and sometimes external tools. Two applications using the same model can behave very differently because the surrounding system differs. Hosted products handle much of the infrastructure, but managers still need to understand data handling and permissions. Open-weight models make their learned parameters available under specified terms; operating one brings hosting, licensing review, evaluation, and maintenance work. Open weights do not automatically mean unrestricted use or full visibility into training data. Compare the complete operating arrangement, rather than deciding from a model name alone.`,
+        },
+        {
+          heading: "Give the model a clear task",
+          body: `You can often begin with instructions rather than additional training. A zero-shot prompt defines the task without showing examples. A few-shot prompt adds several demonstrations of the desired response. For message routing, specify the allowed categories, explain each one, and include an example of an ambiguous message that should go to a person. Those examples guide the current request; they do not permanently retrain the model. Test whether they help on fresh cases. Watch for examples that accidentally exclude a customer group or teach the wrong shortcut. A clearer brief is useful only if the resulting decisions become more reliable.`,
+        },
       ],
       concepts: [
-        { term: 'Foundation model', explanation: 'A broadly trained model that can be adapted for many downstream tasks.' },
-        { term: 'Zero-shot prompting', explanation: 'Giving task instructions without demonstrating sample answers.' },
-        { term: 'Few-shot prompting', explanation: 'Adding a small number of examples to clarify the desired behavior in the current context.' },
-        { term: 'Open weights', explanation: 'Model parameters made available under specified terms, with operating and licensing responsibilities still to assess.' },
+        {
+          term: "Foundation model",
+          explanation:
+            "A broadly trained model that can be adapted for many downstream tasks.",
+        },
+        {
+          term: "Zero-shot prompting",
+          explanation:
+            "Giving task instructions without demonstrating sample answers.",
+        },
+        {
+          term: "Few-shot prompting",
+          explanation:
+            "Adding a small number of examples to clarify the desired behavior in the current context.",
+        },
+        {
+          term: "Open weights",
+          explanation:
+            "Model parameters made available under specified terms, with operating and licensing responsibilities still to assess.",
+        },
       ],
-      visual: { title: 'A model becomes useful inside a system', caption: 'Each surrounding layer changes what the same underlying model can safely do.', steps: [
-        { label: 'Foundation model', detail: 'Reusable learned capabilities.' },
-        { label: 'Task instructions', detail: 'Define the job and desired format.' },
-        { label: 'Approved information', detail: 'Provide relevant current facts.' },
-        { label: 'Application controls', detail: 'Add permissions, review, and monitoring.' },
-      ] },
+      visual: {
+        title: "A model becomes useful inside a system",
+        caption:
+          "Each surrounding layer changes what the same underlying model can safely do.",
+        steps: [
+          {
+            label: "Foundation model",
+            detail: "Reusable learned capabilities.",
+          },
+          {
+            label: "Task instructions",
+            detail: "Define the job and desired format.",
+          },
+          {
+            label: "Approved information",
+            detail: "Provide relevant current facts.",
+          },
+          {
+            label: "Application controls",
+            detail: "Add permissions, review, and monitoring.",
+          },
+        ],
+      },
       tools: [
-        { name: 'GPT, Gemini, Claude, Llama, and Qwen', role: 'Examples of model families. Compare the specific model and deployment arrangement on your task.' },
-        { name: 'Hugging Face', role: 'An ecosystem for finding models and datasets and reading their descriptions, limitations, and terms.' },
+        {
+          name: "GPT, Gemini, Claude, Llama, and Qwen",
+          role: "Examples of model families. Compare the specific model and deployment arrangement on your task.",
+        },
+        {
+          name: "Hugging Face",
+          role: "An ecosystem for finding models and datasets and reading their descriptions, limitations, and terms.",
+        },
       ],
-      example: { title: 'Sorting the support inbox', context: 'Fictional distributor Harbor wants messages labeled billing, delivery, or account. Its first brief leaves the categories undefined.', decision: 'Add category definitions, representative examples, and an escalation option for mixed requests.', result: 'The revised brief is easier to evaluate. The team checks a separate set of messages to determine whether routing actually improves.' },
-      activity: { title: 'Improve the task definition', prompt: 'A message asks about a late delivery and an incorrect invoice. What should the routing brief allow?', options: [
-        { label: 'Always select the first topic mentioned', feedback: 'This is an arbitrary shortcut that can hide a second important issue.' },
-        { label: 'Recognize mixed requests and route for review', feedback: 'Best fit: an explicit ambiguity path prevents the model from forcing every message into a misleading single category.' },
-        { label: 'Choose whichever label sounds confident', feedback: 'Confidence is not a routing rule. Define a repeatable policy that reviewers can assess.' },
-      ], best: 1 },
+      example: {
+        title: "Sorting the support inbox",
+        context:
+          "Fictional distributor Harbor wants messages labeled billing, delivery, or account. Its first brief leaves the categories undefined.",
+        decision:
+          "Add category definitions, representative examples, and an escalation option for mixed requests.",
+        result:
+          "The revised brief is easier to evaluate. The team checks a separate set of messages to determine whether routing actually improves.",
+      },
+      activity: {
+        title: "Improve the task definition",
+        prompt:
+          "A message asks about a late delivery and an incorrect invoice. What should the routing brief allow?",
+        options: [
+          {
+            label: "Always select the first topic mentioned",
+            feedback:
+              "This is an arbitrary shortcut that can hide a second important issue.",
+          },
+          {
+            label: "Recognize mixed requests and route for review",
+            feedback:
+              "Best fit: an explicit ambiguity path prevents the model from forcing every message into a misleading single category.",
+          },
+          {
+            label: "Choose whichever label sounds confident",
+            feedback:
+              "Confidence is not a routing rule. Define a repeatable policy that reviewers can assess.",
+          },
+        ],
+        best: 1,
+      },
       quiz: [
-        { question: 'A generic assistant gives an outdated company policy. What is the most useful diagnosis?', options: ['The application has not supplied reliable current policy.', 'Every foundation model knows all internal documents.', 'A famous model name guarantees freshness.'], answer: 0, explanation: 'Broad pretraining is not a live feed of internal facts. Examine how the application obtains current approved information.' },
-        { question: 'What happens when you add three examples to a prompt?', options: ['The model is permanently retrained.', 'All future mistakes disappear.', 'The examples guide the response within that context.'], answer: 2, explanation: 'Few-shot examples influence the request without changing the model weights. Evaluate fresh cases to see whether they help.' },
+        {
+          question:
+            "A generic assistant gives an outdated company policy. What is the most useful diagnosis?",
+          options: [
+            "The application has not supplied reliable current policy.",
+            "Every foundation model knows all internal documents.",
+            "A famous model name guarantees freshness.",
+          ],
+          answer: 0,
+          explanation:
+            "Broad pretraining is not a live feed of internal facts. Examine how the application obtains current approved information.",
+        },
+        {
+          question: "What happens when you add three examples to a prompt?",
+          options: [
+            "The model is permanently retrained.",
+            "All future mistakes disappear.",
+            "The examples guide the response within that context.",
+          ],
+          answer: 2,
+          explanation:
+            "Few-shot examples influence the request without changing the model weights. Evaluate fresh cases to see whether they help.",
+        },
       ],
-      takeaway: 'Evaluate the model, information, instructions, and operating controls as one application.',
-      reflection: 'Which information would an assistant need from your organization that broad training cannot supply?',
+      takeaway:
+        "Evaluate the model, information, instructions, and operating controls as one application.",
+      reflection:
+        "Which information would an assistant need from your organization that broad training cannot supply?",
       sourceSections: [5, 6],
       sources: [
-        { label: 'Foundation models', path: '1 - Generative AI Fundamentals/5 - Introduction to Foundation Models/What is a Foundation Model? - Summary.md' },
-        { label: 'Training data', path: '1 - Generative AI Fundamentals/5 - Introduction to Foundation Models/Training Data for LLMs - Summary.md' },
-        { label: 'Building applications', path: '1 - Generative AI Fundamentals/6 - Building Applications using Foundation Models/Module Summary.md' },
+        {
+          label: "Foundation models",
+          path: "1 - Generative AI Fundamentals/5 - Introduction to Foundation Models/What is a Foundation Model? - Summary.md",
+        },
+        {
+          label: "Training data",
+          path: "1 - Generative AI Fundamentals/5 - Introduction to Foundation Models/Training Data for LLMs - Summary.md",
+        },
+        {
+          label: "Building applications",
+          path: "1 - Generative AI Fundamentals/6 - Building Applications using Foundation Models/Module Summary.md",
+        },
       ],
     },
     {
-      id: 'f3',
-      title: 'How a model learns and generates',
+      id: "f3",
+      title: "How a model learns and generates",
       minutes: 13,
-      outcome: 'Explain training, inference, transformers, and image generation without technical notation.',
+      outcome:
+        "Explain training, inference, transformers, and image generation without technical notation.",
       sections: [
-        { heading: 'Learning and using are different stages', body: `Training adjusts a model's internal parameters using examples and an objective. Pretraining develops broad patterns and capabilities; later training can improve instruction-following or shape preferences. Inference is the use stage: the trained model receives an input and produces a response. Sending a normal prompt is not the same as retraining the model, even when an application stores conversation history. This distinction matters for cost, privacy, and change management. Ask separately what information the application saves, what is included in the next request, and what the provider may use for future training. These are different questions with different answers.` },
-        { heading: 'Text grows a piece at a time', body: `A text model processes tokens: units that may be words, fragments, or punctuation. A transformer connects information across the available context so that a word or phrase can influence how another part is interpreted. During generation, a language model repeatedly predicts a next token using the input and what it has already produced. There can be several plausible continuations. Selecting among them creates variation, which can be helpful for brainstorming and troublesome for consistent reporting. A likely continuation is not necessarily a verified fact. The system still needs evidence, suitable instructions, and checks aligned to the intended use.` },
-        { heading: 'Images can emerge through refinement', body: `Diffusion models learn to recover structure from noisy examples. At generation time, a text description can guide repeated refinement toward a new image. Related approaches such as flow matching also learn transformations from simple starting distributions toward structured outputs. You do not need the mathematics to understand the management consequence: the result is synthesized, not retrieved proof of a real event. A compelling product image can contain impossible details or imply features that do not exist. Use visual generation to explore ideas, then verify brand details, factual claims, rights, and suitability before publication. Treat variability as something to manage for the task.` },
+        {
+          heading: "Learning and using are different stages",
+          body: `Training adjusts a model's internal parameters using examples and an objective. Pretraining develops broad patterns and capabilities; later training can improve instruction-following or shape preferences. Inference is the use stage: the trained model receives an input and produces a response. Sending a normal prompt is not the same as retraining the model, even when an application stores conversation history. This distinction matters for cost, privacy, and change management. Ask separately what information the application saves, what is included in the next request, and what the provider may use for future training. These are different questions with different answers.`,
+        },
+        {
+          heading: "Text grows a piece at a time",
+          body: `A text model processes tokens: units that may be words, fragments, or punctuation. A transformer connects information across the available context so that a word or phrase can influence how another part is interpreted. During generation, a language model repeatedly predicts a next token using the input and what it has already produced. There can be several plausible continuations. Selecting among them creates variation, which can be helpful for brainstorming and troublesome for consistent reporting. A likely continuation is not necessarily a verified fact. The system still needs evidence, suitable instructions, and checks aligned to the intended use.`,
+        },
+        {
+          heading: "Images can emerge through refinement",
+          body: `Diffusion models learn to recover structure from noisy examples. At generation time, a text description can guide repeated refinement toward a new image. Related approaches such as flow matching also learn transformations from simple starting distributions toward structured outputs. You do not need the mathematics to understand the management consequence: the result is synthesized, not retrieved proof of a real event. A compelling product image can contain impossible details or imply features that do not exist. Use visual generation to explore ideas, then verify brand details, factual claims, rights, and suitability before publication. Treat variability as something to manage for the task.`,
+        },
       ],
       concepts: [
-        { term: 'Training', explanation: 'Changing model parameters using examples and a learning objective.' },
-        { term: 'Inference', explanation: 'Using a trained model to produce an output from an input.' },
-        { term: 'Transformer', explanation: 'A neural-network architecture that relates pieces of information across a context.' },
-        { term: 'Diffusion', explanation: 'A generation approach that learns to transform noise into structured outputs through refinement.' },
+        {
+          term: "Training",
+          explanation:
+            "Changing model parameters using examples and a learning objective.",
+        },
+        {
+          term: "Inference",
+          explanation:
+            "Using a trained model to produce an output from an input.",
+        },
+        {
+          term: "Transformer",
+          explanation:
+            "A neural-network architecture that relates pieces of information across a context.",
+        },
+        {
+          term: "Diffusion",
+          explanation:
+            "A generation approach that learns to transform noise into structured outputs through refinement.",
+        },
       ],
-      visual: { title: 'From context to a text draft', caption: 'This is a simplified conceptual sequence, not a live model trace.', steps: [
-        { label: 'Read the context', detail: 'Process the prompt and supplied information.' },
-        { label: 'Compare continuations', detail: 'Estimate plausible next pieces of text.' },
-        { label: 'Choose a token', detail: 'Append one piece to the response.' },
-        { label: 'Repeat and review', detail: 'Build the draft, then verify its claims.' },
-      ] },
+      visual: {
+        title: "From context to a text draft",
+        caption:
+          "This is a simplified conceptual sequence, not a live model trace.",
+        steps: [
+          {
+            label: "Read the context",
+            detail: "Process the prompt and supplied information.",
+          },
+          {
+            label: "Compare continuations",
+            detail: "Estimate plausible next pieces of text.",
+          },
+          {
+            label: "Choose a token",
+            detail: "Append one piece to the response.",
+          },
+          {
+            label: "Repeat and review",
+            detail: "Build the draft, then verify its claims.",
+          },
+        ],
+      },
       tools: [
-        { name: 'Text assistants', role: 'Make language generation accessible through a conversation interface; their fluent output still needs verification.' },
-        { name: 'Image-generation tools', role: 'Explore visual possibilities from a brief. Compare generated details with the actual product or intended scene.' },
+        {
+          name: "Text assistants",
+          role: "Make language generation accessible through a conversation interface; their fluent output still needs verification.",
+        },
+        {
+          name: "Image-generation tools",
+          role: "Explore visual possibilities from a brief. Compare generated details with the actual product or intended scene.",
+        },
       ],
-      example: { title: 'One brief, several headlines', context: 'Fictional team Meridian asks for headlines for a reusable lunch container and receives different wording each time.', decision: 'Use the variations for ideation, then check every claim against the approved product facts.', result: 'Variation becomes useful creative material. The team rejects an unsupported claim that the container keeps food cold all day.' },
-      activity: { title: 'Identify the stage', prompt: 'A team submits an approved product brief to an already available assistant. What is the model doing?', options: [
-        { label: 'Pretraining from the beginning', feedback: 'Pretraining changes parameters across many examples. That is not what an ordinary prompt request does.' },
-        { label: 'Permanently learning the product catalog', feedback: 'Including facts in a request supplies context; it does not establish permanent learning.' },
-        { label: 'Running inference using the brief as context', feedback: 'Correct: the trained model produces an output from the current input.' },
-      ], best: 2 },
+      example: {
+        title: "One brief, several headlines",
+        context:
+          "Fictional team Meridian asks for headlines for a reusable lunch container and receives different wording each time.",
+        decision:
+          "Use the variations for ideation, then check every claim against the approved product facts.",
+        result:
+          "Variation becomes useful creative material. The team rejects an unsupported claim that the container keeps food cold all day.",
+      },
+      activity: {
+        title: "Identify the stage",
+        prompt:
+          "A team submits an approved product brief to an already available assistant. What is the model doing?",
+        options: [
+          {
+            label: "Pretraining from the beginning",
+            feedback:
+              "Pretraining changes parameters across many examples. That is not what an ordinary prompt request does.",
+          },
+          {
+            label: "Permanently learning the product catalog",
+            feedback:
+              "Including facts in a request supplies context; it does not establish permanent learning.",
+          },
+          {
+            label: "Running inference using the brief as context",
+            feedback:
+              "Correct: the trained model produces an output from the current input.",
+          },
+        ],
+        best: 2,
+      },
       quiz: [
-        { question: 'Why can repeated requests produce different wording?', options: ['Generation can choose among plausible next tokens.', 'Every response is copied from a fixed document.', 'Different wording proves the facts are wrong.'], answer: 0, explanation: 'Probabilistic selection can produce variation. Evaluate factual correctness separately from wording.' },
-        { question: 'A generated photograph looks completely realistic. What does that establish?', options: ['The event definitely happened.', 'The image is visually convincing, not evidence of the event.', 'Every detail is safe to publish.'], answer: 1, explanation: 'Generated realism is not provenance. Check claims, rights, and the intended use before publication.' },
+        {
+          question: "Why can repeated requests produce different wording?",
+          options: [
+            "Generation can choose among plausible next tokens.",
+            "Every response is copied from a fixed document.",
+            "Different wording proves the facts are wrong.",
+          ],
+          answer: 0,
+          explanation:
+            "Probabilistic selection can produce variation. Evaluate factual correctness separately from wording.",
+        },
+        {
+          question:
+            "A generated photograph looks completely realistic. What does that establish?",
+          options: [
+            "The event definitely happened.",
+            "The image is visually convincing, not evidence of the event.",
+            "Every detail is safe to publish.",
+          ],
+          answer: 1,
+          explanation:
+            "Generated realism is not provenance. Check claims, rights, and the intended use before publication.",
+        },
       ],
-      takeaway: 'Generation predicts or synthesizes plausible outputs; evidence and review establish whether those outputs are fit for use.',
-      reflection: 'Where would output variation help your team, and where would consistency matter more?',
+      takeaway:
+        "Generation predicts or synthesizes plausible outputs; evidence and review establish whether those outputs are fit for use.",
+      reflection:
+        "Where would output variation help your team, and where would consistency matter more?",
       sourceSections: [7],
       sources: [
-        { label: 'How generative AI works', path: '1 - Generative AI Fundamentals/7 - How Generative AI Works/Module Summary.md' },
-        { label: 'Generative architectures', path: '1 - Generative AI Fundamentals/7 - How Generative AI Works/GenAI Architectures.md' },
-        { label: 'Training stages', path: '1 - Generative AI Fundamentals/7 - How Generative AI Works/Training GenAI Models - Summary.md' },
+        {
+          label: "How generative AI works",
+          path: "1 - Generative AI Fundamentals/7 - How Generative AI Works/Module Summary.md",
+        },
+        {
+          label: "Generative architectures",
+          path: "1 - Generative AI Fundamentals/7 - How Generative AI Works/GenAI Architectures.md",
+        },
+        {
+          label: "Training stages",
+          path: "1 - Generative AI Fundamentals/7 - How Generative AI Works/Training GenAI Models - Summary.md",
+        },
       ],
     },
     {
-      id: 'f4',
-      title: 'Evidence before enthusiasm',
+      id: "f4",
+      title: "Evidence before enthusiasm",
       minutes: 14,
-      outcome: 'Build an evaluation approach that checks real usefulness and consequential errors.',
+      outcome:
+        "Build an evaluation approach that checks real usefulness and consequential errors.",
       sections: [
-        { heading: 'Decide what good means first', body: `A successful demonstration can conceal failures on ordinary work. Before comparing tools, define the task, acceptable outputs, and unacceptable errors. Assemble representative examples, including difficult cases, different languages, and missing information. Keep some examples separate from prompt improvement or training so the final assessment checks unfamiliar cases. Compare with the existing process on the same work. Record quality, review time, and cost together. A tool that writes faster but doubles correction effort may not improve the workflow. Weight errors by consequence: an awkward sentence and an invented refund commitment should not count as equally serious failures.` },
-        { heading: 'Use more than one lens', body: `Exact checks suit answers with a clear correct result, such as a date extracted from a document. Functional correctness asks whether the intended action actually happened properly. Word-overlap measures such as ROUGE compare a response with reference text, but matching words do not prove matching facts. Meaning-oriented comparisons use embeddings to recognize similar ideas, yet can overlook a small factual difference that changes the decision. Human reviewers assess usefulness, nuance, and practical risk with a shared rubric. In software tasks, engineers also run tests; managers should ask whether those checks represent the actual requirement rather than reviewing the code themselves.` },
-        { heading: 'Treat AI judges as tools to evaluate', body: `An AI judge uses a model to score another output against criteria. It can help review many examples, but its judgments may be inconsistent, biased, or overly impressed by presentation. Calibrate it against examples already assessed by trusted reviewers. Give it clear definitions and examples of serious failures, and investigate disagreements. Public benchmarks can help create a shortlist, but they cannot replace testing on your workflow. After deployment, monitor new failures and changes in incoming work. Evaluation is a repeating operating practice, especially when the model, prompt, information sources, or application changes. Keep an owner for deciding when results justify expansion.` },
+        {
+          heading: "Decide what good means first",
+          body: `A successful demonstration can conceal failures on ordinary work. Before comparing tools, define the task, acceptable outputs, and unacceptable errors. Assemble representative examples, including difficult cases, different languages, and missing information. Keep some examples separate from prompt improvement or training so the final assessment checks unfamiliar cases. Compare with the existing process on the same work. Record quality, review time, and cost together. A tool that writes faster but doubles correction effort may not improve the workflow. Weight errors by consequence: an awkward sentence and an invented refund commitment should not count as equally serious failures.`,
+        },
+        {
+          heading: "Use more than one lens",
+          body: `Exact checks suit answers with a clear correct result, such as a date extracted from a document. Functional correctness asks whether the intended action actually happened properly. Word-overlap measures such as ROUGE compare a response with reference text, but matching words do not prove matching facts. Meaning-oriented comparisons use embeddings to recognize similar ideas, yet can overlook a small factual difference that changes the decision. Human reviewers assess usefulness, nuance, and practical risk with a shared rubric. In software tasks, engineers also run tests; managers should ask whether those checks represent the actual requirement rather than reviewing the code themselves.`,
+        },
+        {
+          heading: "Treat AI judges as tools to evaluate",
+          body: `An AI judge uses a model to score another output against criteria. It can help review many examples, but its judgments may be inconsistent, biased, or overly impressed by presentation. Calibrate it against examples already assessed by trusted reviewers. Give it clear definitions and examples of serious failures, and investigate disagreements. Public benchmarks can help create a shortlist, but they cannot replace testing on your workflow. After deployment, monitor new failures and changes in incoming work. Evaluation is a repeating operating practice, especially when the model, prompt, information sources, or application changes. Keep an owner for deciding when results justify expansion.`,
+        },
       ],
       concepts: [
-        { term: 'Held-out evaluation', explanation: 'Testing on examples kept separate from the material used to tune or improve the system.' },
-        { term: 'Functional correctness', explanation: 'Whether the system successfully performs the intended task or action.' },
-        { term: 'AI judge', explanation: 'A model used to assess outputs against a rubric; its judgments also need validation.' },
-        { term: 'Benchmark', explanation: 'A defined set of tasks and measures used for comparison, which may differ from your real workflow.' },
+        {
+          term: "Held-out evaluation",
+          explanation:
+            "Testing on examples kept separate from the material used to tune or improve the system.",
+        },
+        {
+          term: "Functional correctness",
+          explanation:
+            "Whether the system successfully performs the intended task or action.",
+        },
+        {
+          term: "AI judge",
+          explanation:
+            "A model used to assess outputs against a rubric; its judgments also need validation.",
+        },
+        {
+          term: "Benchmark",
+          explanation:
+            "A defined set of tasks and measures used for comparison, which may differ from your real workflow.",
+        },
       ],
-      visual: { title: 'Four questions before expansion', caption: 'A single score rarely captures the quality of an entire business workflow.', steps: [
-        { label: 'Facts', detail: 'Are claims correct and supported?' },
-        { label: 'Usefulness', detail: 'Does the output meet the actual task?' },
-        { label: 'Consequences', detail: 'Which errors could harm customers or operations?' },
-        { label: 'Operating value', detail: 'What happens to review time, cost, and outcomes?' },
-      ] },
+      visual: {
+        title: "Four questions before expansion",
+        caption:
+          "A single score rarely captures the quality of an entire business workflow.",
+        steps: [
+          { label: "Facts", detail: "Are claims correct and supported?" },
+          {
+            label: "Usefulness",
+            detail: "Does the output meet the actual task?",
+          },
+          {
+            label: "Consequences",
+            detail: "Which errors could harm customers or operations?",
+          },
+          {
+            label: "Operating value",
+            detail: "What happens to review time, cost, and outcomes?",
+          },
+        ],
+      },
       tools: [
-        { name: 'Evaluation scorecard', role: 'A spreadsheet or review form that applies the same criteria to the current process and candidate systems.' },
-        { name: 'ROUGE and semantic comparison', role: 'Engineering measures of text resemblance. Use them as supporting signals, not proof of factual accuracy.' },
-        { name: 'AI-as-a-judge', role: 'An approach for scaling rubric-based review after comparing the judge with trusted human assessments.' },
+        {
+          name: "Evaluation scorecard",
+          role: "A spreadsheet or review form that applies the same criteria to the current process and candidate systems.",
+        },
+        {
+          name: "ROUGE and semantic comparison",
+          role: "Engineering measures of text resemblance. Use them as supporting signals, not proof of factual accuracy.",
+        },
+        {
+          name: "AI-as-a-judge",
+          role: "An approach for scaling rubric-based review after comparing the judge with trusted human assessments.",
+        },
       ],
-      example: { title: 'The elegant but wrong summary', context: 'Fictional company Cedar tests two support-summary tools. One writes smoothly but invents refund promises in some cases.', decision: 'Score unsupported commitments separately from style and measure how long staff spend checking each summary.', result: 'The team can reject a polished tool if its errors and review burden outweigh the drafting time saved.' },
-      activity: { title: 'Read for the consequential error', prompt: 'The source says a refund request is under review. Which summary is fit to send after review?', options: [
-        { label: 'Your refund has been approved and will arrive tomorrow.', feedback: 'This invents approval and a payment date. Fluent wording does not compensate for unsupported commitments.' },
-        { label: 'Your refund request is being reviewed; no decision or payment date is confirmed.', feedback: 'Best fit: this preserves the source facts and uncertainty without adding an unsupported promise.' },
-        { label: 'Your refund is probably approved because the request seems reasonable.', feedback: 'This converts speculation into a customer expectation. State the actual status instead.' },
-      ], best: 1 },
+      example: {
+        title: "The elegant but wrong summary",
+        context:
+          "Fictional company Cedar tests two support-summary tools. One writes smoothly but invents refund promises in some cases.",
+        decision:
+          "Score unsupported commitments separately from style and measure how long staff spend checking each summary.",
+        result:
+          "The team can reject a polished tool if its errors and review burden outweigh the drafting time saved.",
+      },
+      activity: {
+        title: "Read for the consequential error",
+        prompt:
+          "The source says a refund request is under review. Which summary is fit to send after review?",
+        options: [
+          {
+            label: "Your refund has been approved and will arrive tomorrow.",
+            feedback:
+              "This invents approval and a payment date. Fluent wording does not compensate for unsupported commitments.",
+          },
+          {
+            label:
+              "Your refund request is being reviewed; no decision or payment date is confirmed.",
+            feedback:
+              "Best fit: this preserves the source facts and uncertainty without adding an unsupported promise.",
+          },
+          {
+            label:
+              "Your refund is probably approved because the request seems reasonable.",
+            feedback:
+              "This converts speculation into a customer expectation. State the actual status instead.",
+          },
+        ],
+        best: 1,
+      },
       quiz: [
-        { question: 'A summary shares many words with the source but changes the delivery date. What follows?', options: ['High word overlap proves it is correct.', 'The date does not matter if the writing is clear.', 'Word overlap alone cannot establish factual correctness.'], answer: 2, explanation: 'A small changed detail can alter the meaning or business consequence even when most words match.' },
-        { question: 'An AI judge gives every response high marks. What should you do next?', options: ['Compare its scores with trusted human-reviewed cases.', 'Remove difficult examples from the test set.', 'Accept the scores as objective proof.'], answer: 0, explanation: 'Calibrate the judge, examine disagreements, and improve the rubric before relying on its scores.' },
+        {
+          question:
+            "A summary shares many words with the source but changes the delivery date. What follows?",
+          options: [
+            "High word overlap proves it is correct.",
+            "The date does not matter if the writing is clear.",
+            "Word overlap alone cannot establish factual correctness.",
+          ],
+          answer: 2,
+          explanation:
+            "A small changed detail can alter the meaning or business consequence even when most words match.",
+        },
+        {
+          question:
+            "An AI judge gives every response high marks. What should you do next?",
+          options: [
+            "Compare its scores with trusted human-reviewed cases.",
+            "Remove difficult examples from the test set.",
+            "Accept the scores as objective proof.",
+          ],
+          answer: 0,
+          explanation:
+            "Calibrate the judge, examine disagreements, and improve the rubric before relying on its scores.",
+        },
       ],
-      takeaway: 'Measure the real workflow with several kinds of evidence, including serious failure cases.',
-      reflection: 'What is one error your pilot must not hide inside an average quality score?',
+      takeaway:
+        "Measure the real workflow with several kinds of evidence, including serious failure cases.",
+      reflection:
+        "What is one error your pilot must not hide inside an average quality score?",
       sourceSections: [8, 9],
       sources: [
-        { label: 'Evaluation methods', path: '1 - Generative AI Fundamentals/8 - Evaluating Generative AI Models/Evaluation Methods for GenAI Models.md' },
-        { label: 'Benchmarking', path: '1 - Generative AI Fundamentals/8 - Evaluating Generative AI Models/Benchmarking GenAI Models.md' },
-        { label: 'Implementing evaluations', path: '1 - Generative AI Fundamentals/9 - Implementing Evaluations for Generative AI Models/Module Summary.md' },
+        {
+          label: "Evaluation methods",
+          path: "1 - Generative AI Fundamentals/8 - Evaluating Generative AI Models/Evaluation Methods for GenAI Models.md",
+        },
+        {
+          label: "Benchmarking",
+          path: "1 - Generative AI Fundamentals/8 - Evaluating Generative AI Models/Benchmarking GenAI Models.md",
+        },
+        {
+          label: "Implementing evaluations",
+          path: "1 - Generative AI Fundamentals/9 - Implementing Evaluations for Generative AI Models/Module Summary.md",
+        },
       ],
     },
     {
-      id: 'f5',
-      title: 'Learning systems need accountable owners',
+      id: "f5",
+      title: "Learning systems need accountable owners",
       minutes: 14,
-      outcome: 'Connect model learning and limitations to practical ownership and governance.',
+      outcome:
+        "Connect model learning and limitations to practical ownership and governance.",
       sections: [
-        { heading: 'Learning is an error-feedback process', body: `Neural networks contain layers of adjustable relationships. A perceptron is a simple building block; connecting many such units creates a multilayer network. During training, a loss function measures error against an objective. Backpropagation works out how the internal relationships contributed to that error, and an optimizer adjusts them. You do not need to perform these calculations to ask the essential question: does the training objective represent what we actually need? Better performance on a narrow training score does not establish usefulness on unseen work. Data quality, representativeness, and the choice of objective all influence what the model learns.` },
-        { heading: 'Visibility is different from explanation', body: `PyTorch is a framework engineers use to organize data, construct networks, and run training. Its tensors are structured collections of numbers; data loaders organize examples into batches. For management, the key distinction is between operating visibility and full interpretability. Logs, source references, and reviewable intermediate results can help investigate a failure. A model's written explanation, however, is another generated output, not a guaranteed record of its internal reasoning. Ask for evidence that can be independently checked. Give reviewers clear escalation routes when evidence is missing, and avoid treating an impressive narrative as proof that a decision is fair or correct.` },
-        { heading: 'Assign responsibility for the effects', body: `Bias can enter through data, task design, and how a system is used. Review performance across relevant groups and languages rather than relying only on an average. Limit sensitive data, control access, and establish retention rules appropriate to the organization. Synthetic media can spread misinformation or impersonate people, so permission and provenance matter. Environmental costs depend on training and operation; measure resource use rather than assuming every AI project has the same footprint. Workforce effects deserve planning too: train staff, account for review work, and involve people whose responsibilities change. Name a business owner, data owner, reviewer, and incident contact before expanding a pilot.` },
+        {
+          heading: "Learning is an error-feedback process",
+          body: `Neural networks contain layers of adjustable relationships. A perceptron is a simple building block; connecting many such units creates a multilayer network. During training, a loss function measures error against an objective. Backpropagation works out how the internal relationships contributed to that error, and an optimizer adjusts them. You do not need to perform these calculations to ask the essential question: does the training objective represent what we actually need? Better performance on a narrow training score does not establish usefulness on unseen work. Data quality, representativeness, and the choice of objective all influence what the model learns.`,
+        },
+        {
+          heading: "Visibility is different from explanation",
+          body: `PyTorch is a framework engineers use to organize data, construct networks, and run training. Its tensors are structured collections of numbers; data loaders organize examples into batches. For management, the key distinction is between operating visibility and full interpretability. Logs, source references, and reviewable intermediate results can help investigate a failure. A model's written explanation, however, is another generated output, not a guaranteed record of its internal reasoning. Ask for evidence that can be independently checked. Give reviewers clear escalation routes when evidence is missing, and avoid treating an impressive narrative as proof that a decision is fair or correct.`,
+        },
+        {
+          heading: "Assign responsibility for the effects",
+          body: `Bias can enter through data, task design, and how a system is used. Review performance across relevant groups and languages rather than relying only on an average. Limit sensitive data, control access, and establish retention rules appropriate to the organization. Synthetic media can spread misinformation or impersonate people, so permission and provenance matter. Environmental costs depend on training and operation; measure resource use rather than assuming every AI project has the same footprint. Workforce effects deserve planning too: train staff, account for review work, and involve people whose responsibilities change. Name a business owner, data owner, reviewer, and incident contact before expanding a pilot.`,
+        },
       ],
       concepts: [
-        { term: 'Loss function', explanation: 'A measure of training error that tells the learning process what to improve.' },
-        { term: 'Optimizer', explanation: 'The method that adjusts parameters to reduce the chosen training error.' },
-        { term: 'Interpretability', explanation: 'Understanding how a system produces its behavior; a generated explanation alone does not provide it.' },
-        { term: 'Subgroup evaluation', explanation: 'Checking relevant groups separately so average results do not hide concentrated failures.' },
+        {
+          term: "Loss function",
+          explanation:
+            "A measure of training error that tells the learning process what to improve.",
+        },
+        {
+          term: "Optimizer",
+          explanation:
+            "The method that adjusts parameters to reduce the chosen training error.",
+        },
+        {
+          term: "Interpretability",
+          explanation:
+            "Understanding how a system produces its behavior; a generated explanation alone does not provide it.",
+        },
+        {
+          term: "Subgroup evaluation",
+          explanation:
+            "Checking relevant groups separately so average results do not hide concentrated failures.",
+        },
       ],
-      visual: { title: 'Put ownership around the learning loop', caption: 'Technical improvement and organizational accountability need to work together.', steps: [
-        { label: 'Data owner', detail: 'Check permission, quality, and representation.' },
-        { label: 'Model team', detail: 'Train and evaluate against a defined objective.' },
-        { label: 'Business reviewer', detail: 'Check usefulness and consequences.' },
-        { label: 'Incident owner', detail: 'Investigate failures and pause unsafe use.' },
-      ] },
+      visual: {
+        title: "Put ownership around the learning loop",
+        caption:
+          "Technical improvement and organizational accountability need to work together.",
+        steps: [
+          {
+            label: "Data owner",
+            detail: "Check permission, quality, and representation.",
+          },
+          {
+            label: "Model team",
+            detail: "Train and evaluate against a defined objective.",
+          },
+          {
+            label: "Business reviewer",
+            detail: "Check usefulness and consequences.",
+          },
+          {
+            label: "Incident owner",
+            detail: "Investigate failures and pause unsafe use.",
+          },
+        ],
+      },
       tools: [
-        { name: 'PyTorch', role: 'An engineering framework for building and training neural networks; managers use its role to understand effort and ownership.' },
-        { name: 'Risk register and review rubric', role: 'Record known failure modes, controls, owners, and the evidence needed to proceed.' },
-        { name: 'Dataset documentation', role: 'Describe where examples came from, which groups are represented, and what permissions or gaps apply.' },
+        {
+          name: "PyTorch",
+          role: "An engineering framework for building and training neural networks; managers use its role to understand effort and ownership.",
+        },
+        {
+          name: "Risk register and review rubric",
+          role: "Record known failure modes, controls, owners, and the evidence needed to proceed.",
+        },
+        {
+          name: "Dataset documentation",
+          role: "Describe where examples came from, which groups are represented, and what permissions or gaps apply.",
+        },
       ],
-      example: { title: 'An average hides a problem', context: 'Fictional service provider Lumen finds that its message classifier performs well overall but frequently misroutes one regional dialect.', decision: 'Pause expansion for that workflow, investigate representative examples, and test the affected group separately.', result: 'The team gains a concrete quality gap to resolve instead of declaring success from the aggregate score.' },
-      activity: { title: 'Find the missing owner', prompt: 'A pilot has a vendor contact and a business sponsor, but nobody handles customer complaints about incorrect AI output. What is missing?', options: [
-        { label: 'An incident owner with an escalation and pause process', feedback: 'Best fit: someone must be accountable for investigating failures and deciding when use should stop or change.' },
-        { label: 'A more persuasive model explanation', feedback: 'Explanations may help investigation, but they do not assign responsibility or provide a response process.' },
-        { label: 'A higher overall accuracy target only', feedback: 'A target is useful, but customers still need an accountable path when failures occur.' },
-      ], best: 0 },
+      example: {
+        title: "An average hides a problem",
+        context:
+          "Fictional service provider Lumen finds that its message classifier performs well overall but frequently misroutes one regional dialect.",
+        decision:
+          "Pause expansion for that workflow, investigate representative examples, and test the affected group separately.",
+        result:
+          "The team gains a concrete quality gap to resolve instead of declaring success from the aggregate score.",
+      },
+      activity: {
+        title: "Find the missing owner",
+        prompt:
+          "A pilot has a vendor contact and a business sponsor, but nobody handles customer complaints about incorrect AI output. What is missing?",
+        options: [
+          {
+            label: "An incident owner with an escalation and pause process",
+            feedback:
+              "Best fit: someone must be accountable for investigating failures and deciding when use should stop or change.",
+          },
+          {
+            label: "A more persuasive model explanation",
+            feedback:
+              "Explanations may help investigation, but they do not assign responsibility or provide a response process.",
+          },
+          {
+            label: "A higher overall accuracy target only",
+            feedback:
+              "A target is useful, but customers still need an accountable path when failures occur.",
+          },
+        ],
+        best: 0,
+      },
       quiz: [
-        { question: 'Overall accuracy is strong, but one customer language has frequent errors. What is the appropriate next step?', options: ['Ship because the average is high.', 'Investigate and test that group before expansion.', 'Remove that language from reporting.'], answer: 1, explanation: 'An aggregate can conceal concentrated failures. Understand the impact and verify the affected workflow.' },
-        { question: 'A model gives a detailed explanation for an incorrect recommendation. What does that prove?', options: ['Its internal reasoning is fully transparent.', 'The recommendation is safe after all.', 'The explanation also needs independent checking.'], answer: 2, explanation: 'Generated explanations can sound plausible without accurately describing the computation or supporting the recommendation.' },
+        {
+          question:
+            "Overall accuracy is strong, but one customer language has frequent errors. What is the appropriate next step?",
+          options: [
+            "Ship because the average is high.",
+            "Investigate and test that group before expansion.",
+            "Remove that language from reporting.",
+          ],
+          answer: 1,
+          explanation:
+            "An aggregate can conceal concentrated failures. Understand the impact and verify the affected workflow.",
+        },
+        {
+          question:
+            "A model gives a detailed explanation for an incorrect recommendation. What does that prove?",
+          options: [
+            "Its internal reasoning is fully transparent.",
+            "The recommendation is safe after all.",
+            "The explanation also needs independent checking.",
+          ],
+          answer: 2,
+          explanation:
+            "Generated explanations can sound plausible without accurately describing the computation or supporting the recommendation.",
+        },
       ],
-      takeaway: 'A system needs owners for its data, behavior, business use, and failures—not just a model vendor.',
-      reflection: 'Who on your team could pause an AI workflow if a consequential failure appeared?',
+      takeaway:
+        "A system needs owners for its data, behavior, business use, and failures—not just a model vendor.",
+      reflection:
+        "Who on your team could pause an AI workflow if a consequential failure appeared?",
       sourceSections: [10, 11, 12],
       sources: [
-        { label: 'Neural networks', path: '1 - Generative AI Fundamentals/10 - Neural Networks and Multilayer Perceptrons/Module Summary.md' },
-        { label: 'PyTorch concepts', path: '1 - Generative AI Fundamentals/11 - Implementing Neural Networks using Pytorch/Module Summary.md' },
-        { label: 'Interpretability', path: '1 - Generative AI Fundamentals/12 - Model Interpretability and Ethics/Interpretability in AI.md' },
-        { label: 'Bias and fairness', path: '1 - Generative AI Fundamentals/12 - Model Interpretability and Ethics/Understanding and Mitigating Bias in AI.md' },
-        { label: 'Environmental and human impacts', path: '1 - Generative AI Fundamentals/12 - Model Interpretability and Ethics/Environmental and Human Impacts of GenAI.md' },
+        {
+          label: "Neural networks",
+          path: "1 - Generative AI Fundamentals/10 - Neural Networks and Multilayer Perceptrons/Module Summary.md",
+        },
+        {
+          label: "PyTorch concepts",
+          path: "1 - Generative AI Fundamentals/11 - Implementing Neural Networks using Pytorch/Module Summary.md",
+        },
+        {
+          label: "Interpretability",
+          path: "1 - Generative AI Fundamentals/12 - Model Interpretability and Ethics/Interpretability in AI.md",
+        },
+        {
+          label: "Bias and fairness",
+          path: "1 - Generative AI Fundamentals/12 - Model Interpretability and Ethics/Understanding and Mitigating Bias in AI.md",
+        },
+        {
+          label: "Environmental and human impacts",
+          path: "1 - Generative AI Fundamentals/12 - Model Interpretability and Ethics/Environmental and Human Impacts of GenAI.md",
+        },
       ],
     },
     {
-      id: 'f6',
-      title: 'Give AI a useful brief',
+      id: "f6",
+      title: "Give AI a useful brief",
       minutes: 13,
-      outcome: 'Write a clear business prompt and judge the result against evidence and purpose.',
+      outcome:
+        "Write a clear business prompt and judge the result against evidence and purpose.",
       sections: [
-        { heading: 'A prompt is a work brief', body: `A useful prompt tells the assistant what job to do, for whom, using which information, and in what form. Five parts help: role, task, context, output format, and examples. The role establishes viewpoint or tone; the task states the requested work; context supplies facts and constraints. Format makes the result easy to review, and examples show the standard you want. A role is not a credential. Calling the assistant an expert does not supply missing knowledge or guarantee competent advice. Focus on the evidence and the deliverable rather than inventing a long biography for the assistant to imitate.` },
-        { heading: 'Make the boundaries visible', body: `Language models work within a context containing the material available for the current response. Text is represented in tokens, which may be whole words or smaller fragments. Context and output limits constrain how much information can be considered or returned in one request. An application may select or shorten earlier material, so do not assume every past message remains available forever. Supply the relevant source, identify the intended audience, and say what to do when information is absent. Request a concise explanation with supporting evidence or missing-information flags. Those outputs can support review without pretending to expose the model's hidden internal reasoning.` },
-        { heading: 'Improve the brief through comparison', body: `Consider this workplace instruction: act as an operations analyst preparing a director's update; use only the supplied service figures; summarize two trends, identify missing information, and suggest one question for the team in three short bullets. Compare it with simply asking for an update. The stronger brief defines a checkable result and discourages invented causes. Test several realistic cases, including conflicting or incomplete sources. Review factual support, tone, completeness, and consistency with the assigned role. Change one important weakness, then compare again. A successful persona demonstration is less valuable than dependable performance on ordinary work, especially when the correct response is to acknowledge a gap.` },
+        {
+          heading: "A prompt is a work brief",
+          body: `A useful prompt tells the assistant what job to do, for whom, using which information, and in what form. Five parts help: role, task, context, output format, and examples. The role establishes viewpoint or tone; the task states the requested work; context supplies facts and constraints. Format makes the result easy to review, and examples show the standard you want. A role is not a credential. Calling the assistant an expert does not supply missing knowledge or guarantee competent advice. Focus on the evidence and the deliverable rather than inventing a long biography for the assistant to imitate.`,
+        },
+        {
+          heading: "Make the boundaries visible",
+          body: `Language models work within a context containing the material available for the current response. Text is represented in tokens, which may be whole words or smaller fragments. Context and output limits constrain how much information can be considered or returned in one request. An application may select or shorten earlier material, so do not assume every past message remains available forever. Supply the relevant source, identify the intended audience, and say what to do when information is absent. Request a concise explanation with supporting evidence or missing-information flags. Those outputs can support review without pretending to expose the model's hidden internal reasoning.`,
+        },
+        {
+          heading: "Improve the brief through comparison",
+          body: `Consider this workplace instruction: act as an operations analyst preparing a director's update; use only the supplied service figures; summarize two trends, identify missing information, and suggest one question for the team in three short bullets. Compare it with simply asking for an update. The stronger brief defines a checkable result and discourages invented causes. Test several realistic cases, including conflicting or incomplete sources. Review factual support, tone, completeness, and consistency with the assigned role. Change one important weakness, then compare again. A successful persona demonstration is less valuable than dependable performance on ordinary work, especially when the correct response is to acknowledge a gap.`,
+        },
       ],
       concepts: [
-        { term: 'Role-based prompting', explanation: 'Using a role to guide viewpoint and tone, without conferring expertise or authority.' },
-        { term: 'Context', explanation: 'The information available to the model for the current response.' },
-        { term: 'Token', explanation: 'A unit of text representation that may be a word, word fragment, or punctuation.' },
-        { term: 'Output format', explanation: 'The requested shape of the deliverable, such as three bullets or a decision table.' },
+        {
+          term: "Role-based prompting",
+          explanation:
+            "Using a role to guide viewpoint and tone, without conferring expertise or authority.",
+        },
+        {
+          term: "Context",
+          explanation:
+            "The information available to the model for the current response.",
+        },
+        {
+          term: "Token",
+          explanation:
+            "A unit of text representation that may be a word, word fragment, or punctuation.",
+        },
+        {
+          term: "Output format",
+          explanation:
+            "The requested shape of the deliverable, such as three bullets or a decision table.",
+        },
       ],
-      visual: { title: 'Five parts of a useful brief', caption: 'Each part answers a question a human colleague would also need resolved.', steps: [
-        { label: 'Role', detail: 'Whose viewpoint and audience?' },
-        { label: 'Task', detail: 'What specific work is requested?' },
-        { label: 'Context', detail: 'Which facts and constraints apply?' },
-        { label: 'Format', detail: 'What makes the result reviewable?' },
-        { label: 'Examples', detail: 'What does an acceptable result look like?' },
-      ] },
+      visual: {
+        title: "Five parts of a useful brief",
+        caption:
+          "Each part answers a question a human colleague would also need resolved.",
+        steps: [
+          { label: "Role", detail: "Whose viewpoint and audience?" },
+          { label: "Task", detail: "What specific work is requested?" },
+          { label: "Context", detail: "Which facts and constraints apply?" },
+          { label: "Format", detail: "What makes the result reviewable?" },
+          {
+            label: "Examples",
+            detail: "What does an acceptable result look like?",
+          },
+        ],
+      },
       tools: [
-        { name: 'ChatGPT, Claude, or Gemini', role: 'Practice translating a workplace task into a clear natural-language brief using approved information.' },
-        { name: 'Hugging Face model cards', role: 'Read the description and limitations of a model instead of assuming its name establishes suitability.' },
+        {
+          name: "ChatGPT, Claude, or Gemini",
+          role: "Practice translating a workplace task into a clear natural-language brief using approved information.",
+        },
+        {
+          name: "Hugging Face model cards",
+          role: "Read the description and limitations of a model instead of assuming its name establishes suitability.",
+        },
       ],
-      example: { title: 'The missing reason for a decline', context: 'Fictional manager Maya supplies weekly service figures showing fewer resolved tickets, but no staffing or incident data.', decision: 'Ask for a factual summary, explicit missing information, and a follow-up question instead of an invented explanation.', result: 'The draft reports the decline and asks whether staffing or ticket complexity changed. It labels these as questions, not established causes.' },
-      activity: { title: 'Choose the missing-information instruction', prompt: 'Your source shows a sales decline but provides no explanation. Which instruction should the brief include?', options: [
-        { label: 'Invent the most likely cause so the report feels complete', feedback: 'This encourages unsupported claims. A complete-looking narrative can mislead the decision maker.' },
-        { label: 'State the gap and suggest a question for the team', feedback: 'Best fit: preserve what the evidence supports and make the next information need explicit.' },
-        { label: 'Omit the decline to avoid uncertainty', feedback: 'This hides a relevant fact. Report the observation while distinguishing it from an explanation.' },
-      ], best: 1 },
+      example: {
+        title: "The missing reason for a decline",
+        context:
+          "Fictional manager Maya supplies weekly service figures showing fewer resolved tickets, but no staffing or incident data.",
+        decision:
+          "Ask for a factual summary, explicit missing information, and a follow-up question instead of an invented explanation.",
+        result:
+          "The draft reports the decline and asks whether staffing or ticket complexity changed. It labels these as questions, not established causes.",
+      },
+      activity: {
+        title: "Choose the missing-information instruction",
+        prompt:
+          "Your source shows a sales decline but provides no explanation. Which instruction should the brief include?",
+        options: [
+          {
+            label: "Invent the most likely cause so the report feels complete",
+            feedback:
+              "This encourages unsupported claims. A complete-looking narrative can mislead the decision maker.",
+          },
+          {
+            label: "State the gap and suggest a question for the team",
+            feedback:
+              "Best fit: preserve what the evidence supports and make the next information need explicit.",
+          },
+          {
+            label: "Omit the decline to avoid uncertainty",
+            feedback:
+              "This hides a relevant fact. Report the observation while distinguishing it from an explanation.",
+          },
+        ],
+        best: 1,
+      },
       quiz: [
-        { question: 'A prompt says “Act as a finance expert.” What else does a reliable report need?', options: ['Relevant source facts, a clear task, and verification.', 'A more impressive fictional job title.', 'A longer assistant biography.'], answer: 0, explanation: 'Persona shapes presentation. Evidence, task clarity, and review establish whether the deliverable is useful.' },
-        { question: 'What is the best way to evaluate a role-based prompt?', options: ['Check whether one response sounds impressive.', 'Assume an expert persona guarantees accuracy.', 'Test factual support, tone, and consistency across realistic cases.'], answer: 2, explanation: 'A prompt should work across ordinary and difficult cases. Style alone is not a sufficient quality measure.' },
+        {
+          question:
+            "A prompt says “Act as a finance expert.” What else does a reliable report need?",
+          options: [
+            "Relevant source facts, a clear task, and verification.",
+            "A more impressive fictional job title.",
+            "A longer assistant biography.",
+          ],
+          answer: 0,
+          explanation:
+            "Persona shapes presentation. Evidence, task clarity, and review establish whether the deliverable is useful.",
+        },
+        {
+          question: "What is the best way to evaluate a role-based prompt?",
+          options: [
+            "Check whether one response sounds impressive.",
+            "Assume an expert persona guarantees accuracy.",
+            "Test factual support, tone, and consistency across realistic cases.",
+          ],
+          answer: 2,
+          explanation:
+            "A prompt should work across ordinary and difficult cases. Style alone is not a sufficient quality measure.",
+        },
       ],
-      takeaway: 'Give the assistant the same clarity, evidence, and review standard you would give a colleague.',
-      reflection: 'Rewrite one request you often make using role, task, context, format, and an example.',
+      takeaway:
+        "Give the assistant the same clarity, evidence, and review standard you would give a colleague.",
+      reflection:
+        "Rewrite one request you often make using role, task, context, format, and an example.",
       sourceSections: [13, 14, 15],
       sources: [
-        { label: 'Text generation', path: '1 - Generative AI Fundamentals/13 - Generating Text using LLMs/Demo: Generating Text.md' },
-        { label: 'The Hugging Face ecosystem', path: '1 - Generative AI Fundamentals/13 - Generating Text using LLMs/Module Summary.md' },
-        { label: 'Crafting a role-based prompt', path: '1 - Generative AI Fundamentals/14 - Role-Based Prompting/Crafting a Good Role-Based Prompt.md' },
-        { label: 'Evaluating personas', path: '1 - Generative AI Fundamentals/14 - Role-Based Prompting/Evaluating Agent Personas.md' },
-        { label: 'Applying role-based prompting', path: '1 - Generative AI Fundamentals/15 - Implementing Role-Based Prompting with Python/Summary.md' },
+        {
+          label: "Text generation",
+          path: "1 - Generative AI Fundamentals/13 - Generating Text using LLMs/Demo: Generating Text.md",
+        },
+        {
+          label: "The Hugging Face ecosystem",
+          path: "1 - Generative AI Fundamentals/13 - Generating Text using LLMs/Module Summary.md",
+        },
+        {
+          label: "Crafting a role-based prompt",
+          path: "1 - Generative AI Fundamentals/14 - Role-Based Prompting/Crafting a Good Role-Based Prompt.md",
+        },
+        {
+          label: "Evaluating personas",
+          path: "1 - Generative AI Fundamentals/14 - Role-Based Prompting/Evaluating Agent Personas.md",
+        },
+        {
+          label: "Applying role-based prompting",
+          path: "1 - Generative AI Fundamentals/15 - Implementing Role-Based Prompting with Python/Summary.md",
+        },
       ],
     },
     {
-      id: 'f7',
-      title: 'Prompt, retrieve, or fine-tune?',
+      id: "f7",
+      title: "Prompt, retrieve, or fine-tune?",
       minutes: 15,
-      outcome: 'Choose an adaptation approach by diagnosing the actual gap.',
+      outcome: "Choose an adaptation approach by diagnosing the actual gap.",
       sections: [
-        { heading: 'Diagnose before investing', body: `Start with a clear prompt and representative evaluation. If results remain inadequate, identify the reason. An instruction gap may need clearer constraints or examples. An information gap may need retrieval-augmented generation, or RAG, which supplies relevant external material in the context when answering. A persistent skill or style gap may justify fine-tuning, which changes model parameters using training examples. These approaches can be combined. Retrieval is useful for changing policy because source documents can be updated without retraining the model, but it does not guarantee the right document will be found or correctly used. Each approach still needs testing and ownership.` },
-        { heading: 'Efficient adaptation still needs discipline', body: `Fine-tuning requires suitable examples, evaluation data, and a reason to expect a lasting improvement. Parameter-efficient fine-tuning, or PEFT, updates a smaller portion of the model rather than every parameter. LoRA is one approach: it trains compact adapter components alongside a largely frozen base model. This can reduce training resource demands, but it does not remove the need to check regressions or maintain the resulting system. Model compression tackles another problem: operating size or speed. Distillation trains a smaller student to imitate a teacher; quantization uses lower numerical precision; pruning reduces selected connections. Evaluate any quality and hardware tradeoffs instead of assuming a smaller model behaves identically.` },
-        { heading: 'Tools extend capability and responsibility', body: `Some gaps are best handled by tools. A calculator can perform exact arithmetic, a search service can locate information, and a business-system connection can retrieve a record. An agent uses a model to help select or coordinate actions across such tools. Reading information and changing a system have different consequences: sending an email, placing an order, or updating a record needs scoped permissions and appropriate confirmation. Do not choose a complex agent merely because a simple retrieval step exists. Ask which capability is missing, what the smallest reliable addition would be, and how the complete workflow will be evaluated before granting more autonomy.` },
+        {
+          heading: "Diagnose before investing",
+          body: `Start with a clear prompt and representative evaluation. If results remain inadequate, identify the reason. An instruction gap may need clearer constraints or examples. An information gap may need retrieval-augmented generation, or RAG, which supplies relevant external material in the context when answering. A persistent skill or style gap may justify fine-tuning, which changes model parameters using training examples. These approaches can be combined. Retrieval is useful for changing policy because source documents can be updated without retraining the model, but it does not guarantee the right document will be found or correctly used. Each approach still needs testing and ownership.`,
+        },
+        {
+          heading: "Efficient adaptation still needs discipline",
+          body: `Fine-tuning requires suitable examples, evaluation data, and a reason to expect a lasting improvement. Parameter-efficient fine-tuning, or PEFT, updates a smaller portion of the model rather than every parameter. LoRA is one approach: it trains compact adapter components alongside a largely frozen base model. This can reduce training resource demands, but it does not remove the need to check regressions or maintain the resulting system. Model compression tackles another problem: operating size or speed. Distillation trains a smaller student to imitate a teacher; quantization uses lower numerical precision; pruning reduces selected connections. Evaluate any quality and hardware tradeoffs instead of assuming a smaller model behaves identically.`,
+        },
+        {
+          heading: "Tools extend capability and responsibility",
+          body: `Some gaps are best handled by tools. A calculator can perform exact arithmetic, a search service can locate information, and a business-system connection can retrieve a record. An agent uses a model to help select or coordinate actions across such tools. Reading information and changing a system have different consequences: sending an email, placing an order, or updating a record needs scoped permissions and appropriate confirmation. Do not choose a complex agent merely because a simple retrieval step exists. Ask which capability is missing, what the smallest reliable addition would be, and how the complete workflow will be evaluated before granting more autonomy.`,
+        },
       ],
       concepts: [
-        { term: 'RAG', explanation: 'Retrieval-augmented generation: finding relevant source material and providing it as context for an answer.' },
-        { term: 'Fine-tuning', explanation: 'Changing model parameters using additional training examples to influence skills or behavior.' },
-        { term: 'PEFT and LoRA', explanation: 'Efficient adaptation methods that train fewer parameters; LoRA uses small adapter components.' },
-        { term: 'Agent', explanation: 'A system that uses a model to help choose and coordinate steps or tool actions within defined permissions.' },
+        {
+          term: "RAG",
+          explanation:
+            "Retrieval-augmented generation: finding relevant source material and providing it as context for an answer.",
+        },
+        {
+          term: "Fine-tuning",
+          explanation:
+            "Changing model parameters using additional training examples to influence skills or behavior.",
+        },
+        {
+          term: "PEFT and LoRA",
+          explanation:
+            "Efficient adaptation methods that train fewer parameters; LoRA uses small adapter components.",
+        },
+        {
+          term: "Agent",
+          explanation:
+            "A system that uses a model to help choose and coordinate steps or tool actions within defined permissions.",
+        },
       ],
-      visual: { title: 'Match the intervention to the gap', caption: 'These are diagnostic routes, not mutually exclusive product categories.', steps: [
-        { label: 'Instruction gap', detail: 'Clarify the prompt and show examples.' },
-        { label: 'Information gap', detail: 'Retrieve approved current sources.' },
-        { label: 'Behavior gap', detail: 'Evaluate targeted fine-tuning.' },
-        { label: 'Capability gap', detail: 'Use a suitable controlled tool.' },
-        { label: 'Verify again', detail: 'Test the complete workflow and its tradeoffs.' },
-      ] },
+      visual: {
+        title: "Match the intervention to the gap",
+        caption:
+          "These are diagnostic routes, not mutually exclusive product categories.",
+        steps: [
+          {
+            label: "Instruction gap",
+            detail: "Clarify the prompt and show examples.",
+          },
+          {
+            label: "Information gap",
+            detail: "Retrieve approved current sources.",
+          },
+          { label: "Behavior gap", detail: "Evaluate targeted fine-tuning." },
+          {
+            label: "Capability gap",
+            detail: "Use a suitable controlled tool.",
+          },
+          {
+            label: "Verify again",
+            detail: "Test the complete workflow and its tradeoffs.",
+          },
+        ],
+      },
       tools: [
-        { name: 'Hugging Face PEFT and LoRA', role: 'Engineering mechanisms for efficient adaptation; managers should request evidence of improved results and maintenance costs.' },
-        { name: 'Retrieval-backed knowledge assistant', role: 'A product pattern that supplies approved documents during answering, with freshness and access controls.' },
-        { name: 'Calculators and business tools', role: 'Extend exact computation or system access. Write actions need permissions appropriate to their consequences.' },
+        {
+          name: "Hugging Face PEFT and LoRA",
+          role: "Engineering mechanisms for efficient adaptation; managers should request evidence of improved results and maintenance costs.",
+        },
+        {
+          name: "Retrieval-backed knowledge assistant",
+          role: "A product pattern that supplies approved documents during answering, with freshness and access controls.",
+        },
+        {
+          name: "Calculators and business tools",
+          role: "Extend exact computation or system access. Write actions need permissions appropriate to their consequences.",
+        },
       ],
-      example: { title: 'A policy changes every month', context: 'Fictional retailer Vale needs current return-policy answers in a consistent brand voice.', decision: 'Retrieve the approved policy and use prompt examples for tone first. Consider fine-tuning only if measured behavior remains inadequate.', result: 'The design treats changing information and stable style as separate needs, making the reason for each component clear.' },
-      activity: { title: 'Choose the first intervention', prompt: 'An assistant follows the requested tone but quotes an old return policy. What should the team investigate first?', options: [
-        { label: 'Retrieval of the approved current policy', feedback: 'Best fit: this is primarily an information and freshness gap. Also verify access control and whether the retrieved policy is actually used.' },
-        { label: 'A longer fictional persona biography', feedback: 'The tone already works. A persona does not supply the missing current policy.' },
-        { label: 'Full retraining without checking the information flow', feedback: 'That adds complexity before diagnosing a problem that may be addressed by supplying the correct source.' },
-      ], best: 0 },
+      example: {
+        title: "A policy changes every month",
+        context:
+          "Fictional retailer Vale needs current return-policy answers in a consistent brand voice.",
+        decision:
+          "Retrieve the approved policy and use prompt examples for tone first. Consider fine-tuning only if measured behavior remains inadequate.",
+        result:
+          "The design treats changing information and stable style as separate needs, making the reason for each component clear.",
+      },
+      activity: {
+        title: "Choose the first intervention",
+        prompt:
+          "An assistant follows the requested tone but quotes an old return policy. What should the team investigate first?",
+        options: [
+          {
+            label: "Retrieval of the approved current policy",
+            feedback:
+              "Best fit: this is primarily an information and freshness gap. Also verify access control and whether the retrieved policy is actually used.",
+          },
+          {
+            label: "A longer fictional persona biography",
+            feedback:
+              "The tone already works. A persona does not supply the missing current policy.",
+          },
+          {
+            label: "Full retraining without checking the information flow",
+            feedback:
+              "That adds complexity before diagnosing a problem that may be addressed by supplying the correct source.",
+          },
+        ],
+        best: 0,
+      },
       quiz: [
-        { question: 'What does LoRA primarily do?', options: ['Give unrestricted live internet access.', 'Train small adapter components rather than all base-model parameters.', 'Eliminate the need for evaluation.'], answer: 1, explanation: 'LoRA is an efficient adaptation method. It is not a knowledge feed or a guarantee of quality.' },
-        { question: 'A workflow needs exact arithmetic and a verified calculator is available. What is the sensible first option?', options: ['Accept a confident language-model estimate.', 'Train the largest possible model immediately.', 'Use the calculator for that step and evaluate the integration.'], answer: 2, explanation: 'A suitable deterministic tool can address the precise capability gap with less complexity than retraining.' },
+        {
+          question: "What does LoRA primarily do?",
+          options: [
+            "Give unrestricted live internet access.",
+            "Train small adapter components rather than all base-model parameters.",
+            "Eliminate the need for evaluation.",
+          ],
+          answer: 1,
+          explanation:
+            "LoRA is an efficient adaptation method. It is not a knowledge feed or a guarantee of quality.",
+        },
+        {
+          question:
+            "A workflow needs exact arithmetic and a verified calculator is available. What is the sensible first option?",
+          options: [
+            "Accept a confident language-model estimate.",
+            "Train the largest possible model immediately.",
+            "Use the calculator for that step and evaluate the integration.",
+          ],
+          answer: 2,
+          explanation:
+            "A suitable deterministic tool can address the precise capability gap with less complexity than retraining.",
+        },
       ],
-      takeaway: 'Improve instructions for an instruction gap, retrieve for an information gap, and consider training or tools only for a demonstrated need.',
-      reflection: 'Is your most likely AI failure caused by missing instructions, missing information, inconsistent behavior, or a missing capability?',
+      takeaway:
+        "Improve instructions for an instruction gap, retrieve for an information gap, and consider training or tools only for a demonstrated need.",
+      reflection:
+        "Is your most likely AI failure caused by missing instructions, missing information, inconsistent behavior, or a missing capability?",
       sourceSections: [16, 17],
       sources: [
-        { label: 'Adaptation tradeoffs', path: '1 - Generative AI Fundamentals/16 - Adapting Foundation Models/Model Adaptation Tradeoffs.md' },
-        { label: 'Parameter-efficient fine-tuning', path: '1 - Generative AI Fundamentals/16 - Adapting Foundation Models/Parameter Efficient Fine-Tuning.md' },
-        { label: 'Compression and tool use', path: '1 - Generative AI Fundamentals/16 - Adapting Foundation Models/More Model Adaptation Techniques.md' },
-        { label: 'Applying PEFT', path: '1 - Generative AI Fundamentals/17 - Applying PEFT on Foundation Models/Module Summary.md' },
+        {
+          label: "Adaptation tradeoffs",
+          path: "1 - Generative AI Fundamentals/16 - Adapting Foundation Models/Model Adaptation Tradeoffs.md",
+        },
+        {
+          label: "Parameter-efficient fine-tuning",
+          path: "1 - Generative AI Fundamentals/16 - Adapting Foundation Models/Parameter Efficient Fine-Tuning.md",
+        },
+        {
+          label: "Compression and tool use",
+          path: "1 - Generative AI Fundamentals/16 - Adapting Foundation Models/More Model Adaptation Techniques.md",
+        },
+        {
+          label: "Applying PEFT",
+          path: "1 - Generative AI Fundamentals/17 - Applying PEFT on Foundation Models/Module Summary.md",
+        },
       ],
     },
     {
-      id: 'f8',
-      title: 'Reward the outcome you actually want',
+      id: "f8",
+      title: "Reward the outcome you actually want",
       minutes: 15,
-      outcome: 'Evaluate a training proposal and define a measurable, accountable pilot charter.',
+      outcome:
+        "Evaluate a training proposal and define a measurable, accountable pilot charter.",
       sections: [
-        { heading: 'Demonstrations and feedback teach different things', body: `Post-training refines a broadly trained model for a particular style of interaction or capability. Supervised fine-tuning learns from demonstrations of desired responses. Preference-based approaches use judgments about which responses are better. Reinforcement approaches improve behavior using a reward signal. RLHF refers to reinforcement learning from human feedback; DPO learns from preferences through a different optimization approach; GRPO compares rewarded groups of generated responses. They are related methods, not interchangeable names for one algorithm. Managers need not choose the mathematics, but should understand the source of feedback, who defines quality, and whether the proposed training addresses a problem demonstrated in evaluation.` },
-        { heading: 'A reward is a proxy for the goal', body: `A model can improve a measured score while making the business result worse. Rewarding short replies may produce answers that omit necessary conditions; rewarding customer satisfaction alone might encourage unsupported promises. Define quality across the dimensions that matter, including correctness, usefulness, safety, and operating cost. Inspect examples that score well but fail the intended purpose. The source project teaches a model to count letters, showing that confident language does not imply exact execution. In a business workflow, an existing verified counting or calculation tool may be the better solution. Training is an investment hypothesis to test, not the default response to every error.` },
-        { heading: 'Translate the project into a pilot charter', body: `Write a short charter before approving expansion: the workflow, intended users, existing baseline, target improvement, evaluation cases, data boundaries, review owner, cost limit, and stop condition. Keep a separate test set to compare the adapted model with the original and with simpler alternatives. Training tools such as Unsloth can help engineers use resources efficiently; serving tools such as vLLM support running models at scale. Neither changes the need for evidence. Check the complete system after adaptation, including behaviors outside the target task. Release gradually only when the evidence supports it, monitor real work, and preserve a practical route back to the previous process.` },
+        {
+          heading: "Demonstrations and feedback teach different things",
+          body: `Post-training refines a broadly trained model for a particular style of interaction or capability. Supervised fine-tuning learns from demonstrations of desired responses. Preference-based approaches use judgments about which responses are better. Reinforcement approaches improve behavior using a reward signal. RLHF refers to reinforcement learning from human feedback; DPO learns from preferences through a different optimization approach; GRPO compares rewarded groups of generated responses. They are related methods, not interchangeable names for one algorithm. Managers need not choose the mathematics, but should understand the source of feedback, who defines quality, and whether the proposed training addresses a problem demonstrated in evaluation.`,
+        },
+        {
+          heading: "A reward is a proxy for the goal",
+          body: `A model can improve a measured score while making the business result worse. Rewarding short replies may produce answers that omit necessary conditions; rewarding customer satisfaction alone might encourage unsupported promises. Define quality across the dimensions that matter, including correctness, usefulness, safety, and operating cost. Inspect examples that score well but fail the intended purpose. The source project teaches a model to count letters, showing that confident language does not imply exact execution. In a business workflow, an existing verified counting or calculation tool may be the better solution. Training is an investment hypothesis to test, not the default response to every error.`,
+        },
+        {
+          heading: "Translate the project into a pilot charter",
+          body: `Write a short charter before approving expansion: the workflow, intended users, existing baseline, target improvement, evaluation cases, data boundaries, review owner, cost limit, and stop condition. Keep a separate test set to compare the adapted model with the original and with simpler alternatives. Training tools such as Unsloth can help engineers use resources efficiently; serving tools such as vLLM support running models at scale. Neither changes the need for evidence. Check the complete system after adaptation, including behaviors outside the target task. Release gradually only when the evidence supports it, monitor real work, and preserve a practical route back to the previous process.`,
+        },
       ],
       concepts: [
-        { term: 'Supervised fine-tuning', explanation: 'Learning from examples of the response or behavior you want.' },
-        { term: 'Preference learning', explanation: 'Learning from comparisons of better and worse responses.' },
-        { term: 'Reward signal', explanation: 'The measured feedback used to encourage behavior; it may only partially represent the real goal.' },
-        { term: 'Pilot charter', explanation: 'A concise agreement on scope, success measures, owners, boundaries, and conditions for stopping or expanding.' },
+        {
+          term: "Supervised fine-tuning",
+          explanation:
+            "Learning from examples of the response or behavior you want.",
+        },
+        {
+          term: "Preference learning",
+          explanation:
+            "Learning from comparisons of better and worse responses.",
+        },
+        {
+          term: "Reward signal",
+          explanation:
+            "The measured feedback used to encourage behavior; it may only partially represent the real goal.",
+        },
+        {
+          term: "Pilot charter",
+          explanation:
+            "A concise agreement on scope, success measures, owners, boundaries, and conditions for stopping or expanding.",
+        },
       ],
-      visual: { title: 'Close the loop on the real outcome', caption: 'Keep business judgment in the loop when a system improves its training score.', steps: [
-        { label: 'Define the outcome', detail: 'State what useful and safe performance means.' },
-        { label: 'Design feedback', detail: 'Use examples or a balanced quality rubric.' },
-        { label: 'Adapt and compare', detail: 'Test against the baseline on unseen cases.' },
-        { label: 'Inspect tradeoffs', detail: 'Look for regressions and misleading high scores.' },
-        { label: 'Decide and monitor', detail: 'Expand, revise, or stop with a named owner.' },
-      ] },
+      visual: {
+        title: "Close the loop on the real outcome",
+        caption:
+          "Keep business judgment in the loop when a system improves its training score.",
+        steps: [
+          {
+            label: "Define the outcome",
+            detail: "State what useful and safe performance means.",
+          },
+          {
+            label: "Design feedback",
+            detail: "Use examples or a balanced quality rubric.",
+          },
+          {
+            label: "Adapt and compare",
+            detail: "Test against the baseline on unseen cases.",
+          },
+          {
+            label: "Inspect tradeoffs",
+            detail: "Look for regressions and misleading high scores.",
+          },
+          {
+            label: "Decide and monitor",
+            detail: "Expand, revise, or stop with a named owner.",
+          },
+        ],
+      },
       tools: [
-        { name: 'Quality rubric and held-out test set', role: 'Define the desired outcome and check whether training improves unfamiliar work.' },
-        { name: 'Unsloth', role: 'An engineering tool used in the source project to support efficient model adaptation.' },
-        { name: 'vLLM', role: 'An inference and serving engine used to run models efficiently; it does not determine whether their outputs are correct.' },
+        {
+          name: "Quality rubric and held-out test set",
+          role: "Define the desired outcome and check whether training improves unfamiliar work.",
+        },
+        {
+          name: "Unsloth",
+          role: "An engineering tool used in the source project to support efficient model adaptation.",
+        },
+        {
+          name: "vLLM",
+          role: "An inference and serving engine used to run models efficiently; it does not determine whether their outputs are correct.",
+        },
       ],
-      example: { title: 'Shorter is not always better', context: 'Fictional service team Juniper rewards an assistant for short replies. The replies become concise but omit eligibility conditions.', decision: 'Revise the rubric to include factual correctness and necessary next steps, then compare unseen cases with the original system.', result: 'The team can identify whether the broader objective improves the actual service experience instead of merely the brevity score.' },
-      activity: { title: 'Choose a pilot success criterion', prompt: 'Which proposed target best represents a useful support-drafting pilot?', options: [
-        { label: 'Every reply must be under ten words', feedback: 'This is easy to measure but can reward incomplete or misleading answers.' },
-        { label: 'Reviewers must like the writing style', feedback: 'Style matters, but this alone ignores factual errors, omissions, and operating effort.' },
-        { label: 'Reduce total handling time while meeting factual and completeness checks', feedback: 'Best fit: this connects efficiency to quality rather than optimizing one narrow proxy in isolation.' },
-      ], best: 2 },
+      example: {
+        title: "Shorter is not always better",
+        context:
+          "Fictional service team Juniper rewards an assistant for short replies. The replies become concise but omit eligibility conditions.",
+        decision:
+          "Revise the rubric to include factual correctness and necessary next steps, then compare unseen cases with the original system.",
+        result:
+          "The team can identify whether the broader objective improves the actual service experience instead of merely the brevity score.",
+      },
+      activity: {
+        title: "Choose a pilot success criterion",
+        prompt:
+          "Which proposed target best represents a useful support-drafting pilot?",
+        options: [
+          {
+            label: "Every reply must be under ten words",
+            feedback:
+              "This is easy to measure but can reward incomplete or misleading answers.",
+          },
+          {
+            label: "Reviewers must like the writing style",
+            feedback:
+              "Style matters, but this alone ignores factual errors, omissions, and operating effort.",
+          },
+          {
+            label:
+              "Reduce total handling time while meeting factual and completeness checks",
+            feedback:
+              "Best fit: this connects efficiency to quality rather than optimizing one narrow proxy in isolation.",
+          },
+        ],
+        best: 2,
+      },
       quiz: [
-        { question: 'A model improves its brevity score but omits refund conditions. What failed?', options: ['The reward did not represent the full desired outcome.', 'Concise writing is always harmful.', 'All adaptation methods must be abandoned.'], answer: 0, explanation: 'A narrow reward can favor behavior that undermines the actual task. Revisit the objective and test consequential cases.' },
-        { question: 'What belongs in a pilot charter before expansion?', options: ['Only the vendor name and launch date.', 'A baseline, success measures, owners, data boundaries, and stop conditions.', 'A guarantee that training will fix every problem.'], answer: 1, explanation: 'A charter makes the investment and operating decision reviewable. Evidence, accountability, and boundaries matter more than promises.' },
+        {
+          question:
+            "A model improves its brevity score but omits refund conditions. What failed?",
+          options: [
+            "The reward did not represent the full desired outcome.",
+            "Concise writing is always harmful.",
+            "All adaptation methods must be abandoned.",
+          ],
+          answer: 0,
+          explanation:
+            "A narrow reward can favor behavior that undermines the actual task. Revisit the objective and test consequential cases.",
+        },
+        {
+          question: "What belongs in a pilot charter before expansion?",
+          options: [
+            "Only the vendor name and launch date.",
+            "A baseline, success measures, owners, data boundaries, and stop conditions.",
+            "A guarantee that training will fix every problem.",
+          ],
+          answer: 1,
+          explanation:
+            "A charter makes the investment and operating decision reviewable. Evidence, accountability, and boundaries matter more than promises.",
+        },
       ],
-      takeaway: 'Approve AI investments based on demonstrated business outcomes, with clear owners and conditions for stopping.',
-      reflection: 'Write one success measure and one stop condition for the pilot you would propose to your team.',
+      takeaway:
+        "Approve AI investments based on demonstrated business outcomes, with clear owners and conditions for stopping.",
+      reflection:
+        "Write one success measure and one stop condition for the pilot you would propose to your team.",
       sourceSections: [18, 19, 20],
       sources: [
-        { label: 'Post-training', path: '1 - Generative AI Fundamentals/18 - Post-Training Foundation Models/Module Summary.md' },
-        { label: 'Supervised fine-tuning', path: '1 - Generative AI Fundamentals/18 - Post-Training Foundation Models/Supervised Fine-Tuning.md' },
-        { label: 'Reinforcement fine-tuning', path: '1 - Generative AI Fundamentals/18 - Post-Training Foundation Models/Reinforcement Fine-Tuning.md' },
-        { label: 'Reinforcement learning demonstration', path: '1 - Generative AI Fundamentals/19 - Reinforcement Fine-tuning on Foundation Models/Module Summary.md' },
-        { label: 'Counting project', path: '1 - Generative AI Fundamentals/20 - Teaching an LLM to Count!/Project Overview.md' },
-        { label: 'Acceleration tools', path: '1 - Generative AI Fundamentals/20 - Teaching an LLM to Count!/The Acceleration Stack: A Primer.md' },
+        {
+          label: "Post-training",
+          path: "1 - Generative AI Fundamentals/18 - Post-Training Foundation Models/Module Summary.md",
+        },
+        {
+          label: "Supervised fine-tuning",
+          path: "1 - Generative AI Fundamentals/18 - Post-Training Foundation Models/Supervised Fine-Tuning.md",
+        },
+        {
+          label: "Reinforcement fine-tuning",
+          path: "1 - Generative AI Fundamentals/18 - Post-Training Foundation Models/Reinforcement Fine-Tuning.md",
+        },
+        {
+          label: "Reinforcement learning demonstration",
+          path: "1 - Generative AI Fundamentals/19 - Reinforcement Fine-tuning on Foundation Models/Module Summary.md",
+        },
+        {
+          label: "Counting project",
+          path: "1 - Generative AI Fundamentals/20 - Teaching an LLM to Count!/Project Overview.md",
+        },
+        {
+          label: "Acceleration tools",
+          path: "1 - Generative AI Fundamentals/20 - Teaching an LLM to Count!/The Acceleration Stack: A Primer.md",
+        },
       ],
     },
   ],

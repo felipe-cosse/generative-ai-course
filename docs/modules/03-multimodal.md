@@ -77,6 +77,7 @@ Source coverage: 1–5. Duration: 12 minutes.
 **Quiz 2:** An assistant returns every required field. What has been established? A. The format is usable, but the content still needs evaluation. B. Every claim is correct. C. Human review is unnecessary. **Answer: A.** Structure controls output shape, not factual accuracy.
 
 **Sources (relative to supplied archive root):**
+
 - `3 - Multimodal AI Applications/1 - Introduction/Course Overview.md`
 - `3 - Multimodal AI Applications/2 - Multimodal AI Fundamentals/Multimodal AI Fundamentals.md`
 - `3 - Multimodal AI Applications/3 - Using Multimodal AI Technologies/Demo: Showcasing API-based and Open-Source Models.md`
@@ -104,6 +105,7 @@ Source coverage: 6–11. Duration: 12 minutes.
 **Quiz 2:** Visual search returns a suitcase resembling the customer's photo. What should happen before confirming the product? A. Check product identifiers and catalog attributes. B. Treat resemblance as exact identity. C. Ignore all structured product data. **Answer: A.** Embedding similarity helps retrieval but cannot establish exact identity or availability.
 
 **Sources:**
+
 - `3 - Multimodal AI Applications/6 - Introduction to Enterprise Visual Content Processing/Computer Vision Tasks.md`
 - `3 - Multimodal AI Applications/7 - Vision Pre-processing Pipelines with HuggingFace/Demo: Huggingface Datasets and Transformers Pipelines.md`
 - `3 - Multimodal AI Applications/8 - Understanding Embeddings in Computer Vision/Understanding Embeddings in Computer Vision.md`
@@ -132,6 +134,7 @@ Source coverage: 12–16. Duration: 12 minutes.
 **Quiz 2:** A zero-shot model correctly labels ten sample images. What is the next management step? A. Launch without further review. B. Assume it understands every domain. C. Test a representative set, including ambiguous and poor-quality inputs. **Answer: C.** A small clean sample does not establish performance across operating conditions.
 
 **Sources:**
+
 - `3 - Multimodal AI Applications/12 - Vision Transformer Models & Architectures/How Vision Transformers Work.md`
 - `3 - Multimodal AI Applications/13 - Using Vision Transformers/Demo: DINOv2 Image Embeddings.md`
 - `3 - Multimodal AI Applications/13 - Using Vision Transformers/Demo: Object Detection with RT-DETR + Segmentation with SAM2.1.md`
@@ -160,6 +163,7 @@ Source coverage: 17–23. Duration: 12 minutes.
 **Quiz 2:** A transcript changes “do not cancel” to “cancel.” What is the useful evaluation response? A. Ignore it because most words are correct. B. Track meaning-changing errors and require confirmation before account actions. C. Increase file storage without testing again. **Answer: B.** Business harm depends on the meaning of errors, not only a global word-accuracy score.
 
 **Sources:**
+
 - `3 - Multimodal AI Applications/17 - Introduction to Enterprise Audio Processing/Enterprise Applications of Audio Processing.md`
 - `3 - Multimodal AI Applications/18 - Audio Data Representation/How Audio is Represented Digitally.md`
 - `3 - Multimodal AI Applications/19 - Audio Processing with librosa/Demo: Audio Processing with librosa.md`
@@ -189,6 +193,7 @@ Source coverage: 24–27. Duration: 12 minutes.
 **Quiz 2:** A call moderation tool flags a possible customer identifier. Which workflow is best? A. Store the entire unredacted call in every dashboard. B. Assume the flag is certainly correct. C. Restrict access, review the relevant excerpt, and follow the organization's redaction and retention policy. **Answer: C.** The workflow must manage the data and the model's uncertainty together.
 
 **Sources:**
+
 - `3 - Multimodal AI Applications/24 - Audio Intelligence/Audio Intelligence.md`
 - `3 - Multimodal AI Applications/25 - Audio Sentiment Analysis with Gemini/Demo: Audio Sentiment Analysis with Pydantic AI and Gemini.md`
 - `3 - Multimodal AI Applications/26 - Audio Classification and Moderation/Voice Content Moderation.md`
@@ -215,6 +220,7 @@ Source coverage: 28–34. Duration: 12 minutes.
 **Quiz 2:** No policy issue appears in one frame sampled every ten seconds. What can the manager conclude? A. No issue appeared in the sampled frames; brief events could have been missed. B. The entire recording is safe. C. Audio review is unnecessary. **Answer: A.** The evidence is limited by the sampling strategy and modalities examined.
 
 **Sources:**
+
 - `3 - Multimodal AI Applications/28 - Introduction to Enterprise Video Processing/How AI "Watches" Videos.md`
 - `3 - Multimodal AI Applications/29 - AI Models for Video Undestanding/AI Models for Video Understanding.md`
 - `3 - Multimodal AI Applications/30 - Implementing Object Recognition & Tracking/Exercise: Luggage Counting on a Conveyor Belt.md`
@@ -244,6 +250,7 @@ Source coverage: 35–39. Duration: 12 minutes.
 **Quiz 2:** A team combines three specialist AI services. What operating cost should be planned? A. Coordination, separate failure handling, and end-to-end monitoring. B. None, because each service works alone. C. Only the subscription price of the cheapest service. **Answer: A.** The whole workflow must align outputs, latency, access, and failures across services.
 
 **Sources:**
+
 - `3 - Multimodal AI Applications/35 - Video Generation/Video Generation.md`
 - `3 - Multimodal AI Applications/35 - Video Generation/Video Generation Tools.md`
 - `3 - Multimodal AI Applications/36 - Video Generation with Veo 3/Demo: Generate a Marketing Video with Veo 3.md`
@@ -272,6 +279,7 @@ Source coverage: 40–45. Duration: 15 minutes.
 **Quiz 2:** An automated judge approves every answer in the pilot. Is launch justified? A. Yes, automated judges are objective. B. Yes, if the demo looked polished. C. Only after representative checks, human review, and the agreed business and operational gates also pass. **Answer: C.** A judge is one evaluation signal, not a substitute for the complete launch decision.
 
 **Sources:**
+
 - `3 - Multimodal AI Applications/40 - Multimodal AI Performance Monitoring and Logging/Multimodal Performance Monitoring and Logging.md`
 - `3 - Multimodal AI Applications/41 - Logging and Performance Monitoring with Gradio and Arize Phoenix/Demo: Logging and Monitoring a Multimodal Application.md`
 - `3 - Multimodal AI Applications/42 - Evaluating Multimodal Applications/Testing Multimodal Applications.md`
