@@ -1,0 +1,715 @@
+[
+  {
+    "name": "Gradio (module 1 conflict-removal reference)",
+    "aliases": [
+      "gradio-client"
+    ],
+    "type": "Excluded package reference",
+    "role": "Mentioned only in commands that remove conflicting packages from the project runtime.",
+    "sourcePaths": [
+      "1 - Generative AI Fundamentals/20 - Teaching an LLM to Count!/requirements.txt"
+    ],
+    "lessonIds": [
+      "f8"
+    ],
+    "disposition": "exclude",
+    "reason": "Do not imply module 1 uses Gradio; include elsewhere only with actual module evidence.",
+    "module": "fundamentals"
+  },
+  {
+    "name": "torchtune (incidental documentation link)",
+    "aliases": [],
+    "type": "Excluded package reference",
+    "role": "A notebook comment links to torchtune documentation while the actual generation call uses Transformers.",
+    "sourcePaths": [
+      "1 - Generative AI Fundamentals/13 - Generating Text using LLMs/Exercise: One Token at a Time.ipynb"
+    ],
+    "lessonIds": [
+      "f6"
+    ],
+    "disposition": "exclude",
+    "reason": "No torchtune import or direct dependency; the link is not evidence of use.",
+    "module": "fundamentals"
+  },
+  {
+    "name": "Hugging Face Tokenizers (module 1 ambiguous mention)",
+    "aliases": [
+      "tokenizers"
+    ],
+    "type": "Excluded package reference",
+    "role": "Tokenizers are taught as a component; the separately named package occurs in the frozen environment.",
+    "sourcePaths": [
+      "1 - Generative AI Fundamentals/13 - Generating Text using LLMs/Demo: Introduction to HuggingFace.md",
+      "1 - Generative AI Fundamentals/13 - Generating Text using LLMs/Module Summary.md",
+      "1 - Generative AI Fundamentals/13 - Generating Text using LLMs/Demo: Introduction to HuggingFace.ipynb"
+    ],
+    "lessonIds": [
+      "f6"
+    ],
+    "disposition": "exclude",
+    "reason": "The module demonstrates Transformers tokenizer interfaces; do not infer a separate package from generic component terminology.",
+    "module": "fundamentals"
+  },
+  {
+    "name": "BLEU and ROUGE metrics",
+    "aliases": [
+      "BLEU",
+      "ROUGE",
+      "ROUGE-L"
+    ],
+    "type": "Concepts",
+    "role": "Quality measures taught in evaluation; software that calculates them is covered by Evaluate.",
+    "sourcePaths": [
+      "1 - Generative AI Fundamentals/8 - Evaluating Generative AI Models/Evaluation Methods for GenAI Models.md",
+      "1 - Generative AI Fundamentals/9 - Implementing Evaluations for Generative AI Models/Demo: Evaluating GenAI Models.md",
+      "1 - Generative AI Fundamentals/9 - Implementing Evaluations for Generative AI Models/Exercise Solution: Evaluating GenAI Models.md",
+      "1 - Generative AI Fundamentals/9 - Implementing Evaluations for Generative AI Models/Exercise: Evaluating GenAI Models.md"
+    ],
+    "lessonIds": [
+      "f4"
+    ],
+    "disposition": "exclude",
+    "reason": "Preserve in the glossary and metric explanations, not as fictitious standalone apps.",
+    "module": "fundamentals"
+  },
+  {
+    "name": "BERTScore (further reading)",
+    "aliases": [],
+    "type": "Metric",
+    "role": "Additional reading on an evaluation metric.",
+    "sourcePaths": [
+      "1 - Generative AI Fundamentals/Exercise/module-8-implementing-evaluations-for-generative-ai-models/README.md"
+    ],
+    "lessonIds": [
+      "f4"
+    ],
+    "disposition": "exclude",
+    "reason": "No demonstrated BERTScore implementation; an optional resource rather than a course software dependency.",
+    "module": "fundamentals"
+  },
+  {
+    "name": "Instructor employers and organizations",
+    "aliases": [
+      "Salesforce",
+      "Einstein Guidance",
+      "Samba TV",
+      "DeepMind"
+    ],
+    "type": "Organizations",
+    "role": "Named in instructor biography rather than as course tools.",
+    "sourcePaths": [
+      "1 - Generative AI Fundamentals/1 - Introduction to Generative AI Foundations/Meet Your Instructor.md"
+    ],
+    "lessonIds": [
+      "f1"
+    ],
+    "disposition": "exclude",
+    "reason": "Biographical company names are outside the tool inventory.",
+    "module": "fundamentals"
+  },
+  {
+    "name": "NIST and UNESCO contextual guidance",
+    "aliases": [
+      "NIST",
+      "UNESCO"
+    ],
+    "type": "Guidance resources",
+    "role": "Organizations and reading links named around applications and responsibility.",
+    "sourcePaths": [
+      "1 - Generative AI Fundamentals/4 - Applications of Generative AI/Real World Applications of Generative AI - Summary.md"
+    ],
+    "lessonIds": [
+      "f1"
+    ],
+    "disposition": "exclude",
+    "reason": "Optional policy reading belongs in the resource section; organizations are not software products.",
+    "module": "fundamentals"
+  },
+  {
+    "name": "Frozen environment-only dependencies",
+    "aliases": [
+      "requests",
+      "pydantic",
+      "beautifulsoup4",
+      "playwright",
+      "Pillow",
+      "prometheus-client",
+      "tiktoken",
+      "rouge-score"
+    ],
+    "type": "Excluded dependency group",
+    "role": "Packages present in the general frozen environment without direct module teaching evidence.",
+    "sourcePaths": [
+      "1 - Generative AI Fundamentals/Exercise/requirements.txt"
+    ],
+    "lessonIds": [
+      "f1",
+      "f2",
+      "f4",
+      "f5",
+      "f6",
+      "f7",
+      "f8"
+    ],
+    "disposition": "exclude",
+    "reason": "Do not treat a frozen environment inventory as a list of course tools. Other modules may independently justify individual entries.",
+    "module": "fundamentals"
+  },
+  {
+    "name": "Python standard library and local helper functions",
+    "aliases": [
+      "os",
+      "re",
+      "json",
+      "math",
+      "random",
+      "typing",
+      "unittest",
+      "collections"
+    ],
+    "type": "Excluded implementation details",
+    "role": "Language internals and exercise helper functions.",
+    "sourcePaths": [
+      "1 - Generative AI Fundamentals/20 - Teaching an LLM to Count!/gen_ai_fundamentals_project_starter.ipynb"
+    ],
+    "lessonIds": [
+      "f8"
+    ],
+    "disposition": "exclude",
+    "reason": "No standalone management-facing product role; prevent implementation details from overwhelming the guide.",
+    "module": "fundamentals"
+  },
+  {
+    "name": "Python standard library",
+    "aliases": [
+      "os",
+      "json",
+      "typing",
+      "datetime",
+      "time",
+      "pathlib",
+      "argparse",
+      "hashlib",
+      "logging",
+      "uuid",
+      "enum",
+      "pprint",
+      "warnings"
+    ],
+    "type": "Implementation helpers",
+    "role": "Standard runtime modules used by example code.",
+    "sourcePaths": [
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/17 - RAG Evaluation Implementation/Solution: RAG Evaluation.md",
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/3 - Implementing a Chatbot with an LLM/Chatbot Issues and Testing.md",
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/11 - Applying Model Selection and Economics/Exercise: Model Selection.md",
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/3 - Implementing a Chatbot with an LLM/test_chatbot.py"
+    ],
+    "lessonIds": [
+      "r1",
+      "r2",
+      "r3",
+      "r4",
+      "r5",
+      "r7",
+      "r8"
+    ],
+    "disposition": "exclude",
+    "reason": "Bundled standard-library modules and type helpers are covered by Python, not separate manager-facing products.",
+    "module": "rag"
+  },
+  {
+    "name": "Course helper classes and modules",
+    "aliases": [
+      "customer_service_bot",
+      "llm_client",
+      "rag_client",
+      "ragas_evaluator",
+      "InferenceExplorer",
+      "PromptEngineer"
+    ],
+    "type": "Implementation helpers",
+    "role": "Locally authored exercise components inside the course applications.",
+    "sourcePaths": [
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/3 - Implementing a Chatbot with an LLM/Chatbot Issues and Testing.md",
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/5 - Applied Prompting and Inference/Exercise: LLM Inference Parameters.md",
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/3 - Implementing a Chatbot with an LLM/Exercise: Build Your Customer Service Chatbot.md",
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/5 - Applied Prompting and Inference/Exercise: Prompt Engineering with Chain of Thought.md"
+    ],
+    "lessonIds": [
+      "r1",
+      "r2",
+      "r8"
+    ],
+    "disposition": "exclude",
+    "reason": "Local wrappers/helper classes are not standalone tools; covered by the educational systems and their actual dependencies.",
+    "module": "rag"
+  },
+  {
+    "name": "Word2Vec",
+    "aliases": [],
+    "type": "Technique / paper",
+    "role": "Historical embedding technique cited in further learning.",
+    "sourcePaths": [
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/8 - Tokens, Embeddings, and Vector Search/Resources for Further Learning.md"
+    ],
+    "lessonIds": [
+      "r4"
+    ],
+    "disposition": "exclude",
+    "reason": "Paper/technique reference rather than a named software implementation used in this module; belongs with concepts.",
+    "module": "rag"
+  },
+  {
+    "name": "WordPiece",
+    "aliases": [],
+    "type": "Technique",
+    "role": "Tokenization method discussed conceptually.",
+    "sourcePaths": [
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/8 - Tokens, Embeddings, and Vector Search/Tokenization.md",
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/8 - Tokens, Embeddings, and Vector Search/Tokenization Steps.md"
+    ],
+    "lessonIds": [
+      "r4"
+    ],
+    "disposition": "exclude",
+    "reason": "Algorithm, not a standalone library; concrete tokenizer libraries are included.",
+    "module": "rag"
+  },
+  {
+    "name": "Byte-pair encoding",
+    "aliases": [
+      "BPE"
+    ],
+    "type": "Technique",
+    "role": "Tokenization method discussed conceptually.",
+    "sourcePaths": [
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/8 - Tokens, Embeddings, and Vector Search/Tokenization.md",
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/8 - Tokens, Embeddings, and Vector Search/Tokenization Steps.md",
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/8 - Tokens, Embeddings, and Vector Search/Resources for Further Learning.md"
+    ],
+    "lessonIds": [
+      "r4"
+    ],
+    "disposition": "exclude",
+    "reason": "Algorithm, not a standalone library; subword-nmt and tokenizer tools cover actual implementations.",
+    "module": "rag"
+  },
+  {
+    "name": "HNSW",
+    "aliases": [
+      "Hierarchical Navigable Small World"
+    ],
+    "type": "Technique",
+    "role": "Approximate-nearest-neighbor indexing algorithm.",
+    "sourcePaths": [
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/13 - Semantic Search with Vector Databases for RAG/Vector Databases.md",
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/8 - Tokens, Embeddings, and Vector Search/Vectors and Vector Search.md",
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/13 - Semantic Search with Vector Databases for RAG/Retrieval, Ranking.md"
+    ],
+    "lessonIds": [
+      "r4",
+      "r6"
+    ],
+    "disposition": "exclude",
+    "reason": "Algorithm, not a separate system; hnswlib and search databases are included.",
+    "module": "rag"
+  },
+  {
+    "name": "TF-IDF",
+    "aliases": [],
+    "type": "Technique",
+    "role": "Statistical text representation named in the embeddings discussion.",
+    "sourcePaths": [
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/8 - Tokens, Embeddings, and Vector Search/Embeddings.md"
+    ],
+    "lessonIds": [
+      "r4"
+    ],
+    "disposition": "exclude",
+    "reason": "A method, not a separately named application or library.",
+    "module": "rag"
+  },
+  {
+    "name": "Sentence-BERT",
+    "aliases": [
+      "SBERT"
+    ],
+    "type": "Model architecture / paper",
+    "role": "Sentence-embedding architecture cited in retrieval references.",
+    "sourcePaths": [
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/13 - Semantic Search with Vector Databases for RAG/Vector Databases.md",
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/13 - Semantic Search with Vector Databases for RAG/Retrieval, Ranking.md"
+    ],
+    "lessonIds": [
+      "r6"
+    ],
+    "disposition": "exclude",
+    "reason": "Architecture/paper reference is explained through the included Sentence Transformers library and BERT-family context; avoid conflating an architecture with a software library.",
+    "module": "rag"
+  },
+  {
+    "name": "ColBERT",
+    "aliases": [],
+    "type": "Model architecture / paper",
+    "role": "Late-interaction retrieval architecture cited in further learning.",
+    "sourcePaths": [
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/13 - Semantic Search with Vector Databases for RAG/Retrieval, Ranking.md"
+    ],
+    "lessonIds": [
+      "r6"
+    ],
+    "disposition": "exclude",
+    "reason": "Only a paper/architecture citation in this module, not a configured tool; may be added if broader research resources are desired.",
+    "officialUrl": "https://github.com/stanford-futuredata/ColBERT",
+    "officialChecked": "2026-11-13",
+    "module": "rag"
+  },
+  {
+    "name": "Dense Passage Retrieval",
+    "aliases": [
+      "DPR"
+    ],
+    "type": "Model architecture / paper",
+    "role": "Dense retrieval research cited in further learning.",
+    "sourcePaths": [
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/13 - Semantic Search with Vector Databases for RAG/Vector Databases.md"
+    ],
+    "lessonIds": [
+      "r6"
+    ],
+    "disposition": "exclude",
+    "reason": "Only a paper citation in this module, not a configured tool; keep the technical concept separate from the product inventory.",
+    "officialUrl": "https://github.com/facebookresearch/DPR",
+    "officialChecked": "2026-11-13",
+    "module": "rag"
+  },
+  {
+    "name": "Cloud provider umbrella names",
+    "aliases": [
+      "AWS",
+      "Azure",
+      "GCP"
+    ],
+    "type": "Providers",
+    "role": "Vendor names in the cloud-model comparison.",
+    "sourcePaths": [
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/10 - Strategic Model Selection & Economics/Selection Process and Resources.md"
+    ],
+    "lessonIds": [
+      "r5"
+    ],
+    "disposition": "exclude",
+    "reason": "The specific named services Amazon Bedrock, Azure OpenAI, and Vertex AI are included; duplicate company rows add no distinct tool role.",
+    "module": "rag"
+  },
+  {
+    "name": "Latitude",
+    "aliases": [
+      "Latitude Blog"
+    ],
+    "type": "Publisher / learning resource",
+    "role": "Publisher of a prompt-template article linked by the source notes.",
+    "sourcePaths": [
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/4 - LLM Prompting & Inference/Prompt Templating.md"
+    ],
+    "lessonIds": [
+      "r2"
+    ],
+    "disposition": "exclude",
+    "reason": "The archive links an article but does not teach or use the Latitude product; do not infer a tool from a publisher domain.",
+    "module": "rag"
+  },
+  {
+    "name": "OpenAI Pricing Calculator",
+    "aliases": [],
+    "type": "Reference label",
+    "role": "The source label points to OpenAI's pricing page.",
+    "sourcePaths": [
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/10 - Strategic Model Selection & Economics/Selection Process and Resources.md",
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/11 - Applying Model Selection and Economics/Demo: Model Selection and Cost.md"
+    ],
+    "lessonIds": [
+      "r5"
+    ],
+    "disposition": "exclude",
+    "reason": "No distinct calculator product is established by that link. Current pricing references belong to the API entry, with no hardcoded estimates.",
+    "module": "rag"
+  },
+  {
+    "name": "NASA mission document collection",
+    "aliases": [
+      "Apollo 11",
+      "Apollo 13",
+      "Challenger"
+    ],
+    "type": "Dataset resource",
+    "role": "Supplied source text and evaluation records used by the educational capstone.",
+    "sourcePaths": [
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/18 - Project: NASA Mission Intelligence: Developing a RAG-Based Chat System/Rubric.md",
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/18 - Project: NASA Mission Intelligence: Developing a RAG-Based Chat System/Project Overview.md",
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/18 - Project: NASA Mission Intelligence: Developing a RAG-Based Chat System/Project-NASA-Mission-Intelligence-Starter/README.md",
+      "2 - Large Language Models (LLMs) and Retrival Augmented Generation (RAG)/18 - Project: NASA Mission Intelligence: Developing a RAG-Based Chat System/Project-NASA-Mission-Intelligence-Starter/llm_client.py"
+    ],
+    "lessonIds": [
+      "r8"
+    ],
+    "disposition": "exclude",
+    "reason": "Task data rather than a tool or platform; explain it in the NASA Mission Intelligence educational-system entry.",
+    "module": "rag"
+  },
+  {
+    "name": "Frozen",
+    "aliases": [],
+    "type": "Ambiguous model label",
+    "role": "Unresolved shortened model name in a text-video retrieval discussion.",
+    "sourcePaths": [
+      "3 - Multimodal AI Applications/4 - Transformers & Multimodal Processing/How Transformers Became the Jack of All Trades (Part 2).md"
+    ],
+    "sourceOccurrenceCount": 1,
+    "lessonIds": [
+      "m1"
+    ],
+    "disposition": "exclude",
+    "reason": "Source provides no identifying reference and its hierarchical frame/scene claims do not establish a match to Frozen in Time. Official Frozen in Time research was checked, but identity remains ambiguous; do not invent a product match.",
+    "currentGuideNames": [],
+    "currentGlossaryNames": [],
+    "module": "multimodal"
+  },
+  {
+    "name": "IBM Watson Video Analysis",
+    "aliases": [],
+    "type": "Unresolved / historical label",
+    "role": "Unverified named service in a source transcript.",
+    "sourcePaths": [
+      "3 - Multimodal AI Applications/31 - Video Understanding & Search/Video Understanding with Foundation models.md"
+    ],
+    "sourceOccurrenceCount": 1,
+    "lessonIds": [
+      "m6"
+    ],
+    "disposition": "exclude",
+    "reason": "Exact product identity/current official destination not established; do not invent an active service from a transcript label. Keep in audit as unresolved historical reference.",
+    "currentGuideNames": [],
+    "currentGlossaryNames": [],
+    "module": "multimodal"
+  },
+  {
+    "name": "MedicalClip",
+    "aliases": [],
+    "type": "Ambiguous model label",
+    "role": "Generic domain-specific CLIP example in a transcript.",
+    "sourcePaths": [
+      "3 - Multimodal AI Applications/14 - Vision-Language Models/Vision-Language Models Overview.md"
+    ],
+    "sourceOccurrenceCount": 1,
+    "lessonIds": [
+      "m3"
+    ],
+    "disposition": "exclude",
+    "reason": "Source does not identify a specific repository or paper. Do not silently map this name to MedCLIP or claim a specific medical product.",
+    "currentGuideNames": [],
+    "currentGlossaryNames": [],
+    "module": "multimodal"
+  },
+  {
+    "name": "SAP",
+    "aliases": [],
+    "type": "Company example",
+    "role": "Company named in an industry integration example.",
+    "sourcePaths": [
+      "3 - Multimodal AI Applications/37 - Multimodal AI Deployment/Understanding Multimodal AI Deployment.md"
+    ],
+    "sourceOccurrenceCount": 1,
+    "lessonIds": [
+      "m7"
+    ],
+    "disposition": "exclude",
+    "reason": "Company case-study reference, not a named tool or product in the material.",
+    "currentGuideNames": [],
+    "currentGlossaryNames": [],
+    "module": "multimodal"
+  },
+  {
+    "name": "Sguil",
+    "aliases": [],
+    "type": "Unrelated template artifact",
+    "role": "Security-operations example accidentally retained in a project proposal template.",
+    "sourcePaths": [
+      "3 - Multimodal AI Applications/45 - OmniTrainer Multimodal Customer Service Trainer/starter/project_proposal.md",
+      "3 - Multimodal AI Applications/Exercise/project/starter/project_proposal.md"
+    ],
+    "sourceOccurrenceCount": 2,
+    "lessonIds": [
+      "m8"
+    ],
+    "disposition": "exclude",
+    "reason": "Appears only in an unrelated cybersecurity example inside the project_proposal.md template; not multimodal course tooling.",
+    "currentGuideNames": [],
+    "currentGlossaryNames": [],
+    "module": "multimodal"
+  },
+  {
+    "name": "Snort",
+    "aliases": [],
+    "type": "Unrelated template artifact",
+    "role": "Security-operations example accidentally retained in a project proposal template.",
+    "sourcePaths": [
+      "3 - Multimodal AI Applications/45 - OmniTrainer Multimodal Customer Service Trainer/starter/project_proposal.md",
+      "3 - Multimodal AI Applications/Exercise/project/starter/project_proposal.md"
+    ],
+    "sourceOccurrenceCount": 2,
+    "lessonIds": [
+      "m8"
+    ],
+    "disposition": "exclude",
+    "reason": "Appears only in an unrelated cybersecurity example inside the project_proposal.md template; not multimodal course tooling.",
+    "currentGuideNames": [],
+    "currentGlossaryNames": [],
+    "module": "multimodal"
+  },
+  {
+    "name": "Suricata",
+    "aliases": [],
+    "type": "Unrelated template artifact",
+    "role": "Security-operations example accidentally retained in a project proposal template.",
+    "sourcePaths": [
+      "3 - Multimodal AI Applications/45 - OmniTrainer Multimodal Customer Service Trainer/starter/project_proposal.md",
+      "3 - Multimodal AI Applications/Exercise/project/starter/project_proposal.md"
+    ],
+    "sourceOccurrenceCount": 2,
+    "lessonIds": [
+      "m8"
+    ],
+    "disposition": "exclude",
+    "reason": "Appears only in an unrelated cybersecurity example inside the project_proposal.md template; not multimodal course tooling.",
+    "currentGuideNames": [],
+    "currentGlossaryNames": [],
+    "module": "multimodal"
+  },
+  {
+    "name": "tcpdump",
+    "aliases": [],
+    "type": "Unrelated template artifact",
+    "role": "Security-operations example accidentally retained in a project proposal template.",
+    "sourcePaths": [
+      "3 - Multimodal AI Applications/45 - OmniTrainer Multimodal Customer Service Trainer/starter/project_proposal.md",
+      "3 - Multimodal AI Applications/Exercise/project/starter/project_proposal.md"
+    ],
+    "sourceOccurrenceCount": 2,
+    "lessonIds": [
+      "m8"
+    ],
+    "disposition": "exclude",
+    "reason": "Appears only in an unrelated cybersecurity example inside the project_proposal.md template; not multimodal course tooling.",
+    "currentGuideNames": [],
+    "currentGlossaryNames": [],
+    "module": "multimodal"
+  },
+  {
+    "name": "Wireshark",
+    "aliases": [],
+    "type": "Unrelated template artifact",
+    "role": "Security-operations example accidentally retained in a project proposal template.",
+    "sourcePaths": [
+      "3 - Multimodal AI Applications/45 - OmniTrainer Multimodal Customer Service Trainer/starter/project_proposal.md",
+      "3 - Multimodal AI Applications/Exercise/project/starter/project_proposal.md"
+    ],
+    "sourceOccurrenceCount": 2,
+    "lessonIds": [
+      "m8"
+    ],
+    "disposition": "exclude",
+    "reason": "Appears only in an unrelated cybersecurity example inside the project_proposal.md template; not multimodal course tooling.",
+    "currentGuideNames": [],
+    "currentGlossaryNames": [],
+    "module": "multimodal"
+  },
+  {
+    "name": "tshark",
+    "aliases": [],
+    "type": "Unrelated template artifact",
+    "role": "Security-operations example accidentally retained in a project proposal template.",
+    "sourcePaths": [
+      "3 - Multimodal AI Applications/45 - OmniTrainer Multimodal Customer Service Trainer/starter/project_proposal.md",
+      "3 - Multimodal AI Applications/Exercise/project/starter/project_proposal.md"
+    ],
+    "sourceOccurrenceCount": 2,
+    "lessonIds": [
+      "m8"
+    ],
+    "disposition": "exclude",
+    "reason": "Appears only in an unrelated cybersecurity example inside the project_proposal.md template; not multimodal course tooling.",
+    "currentGuideNames": [],
+    "currentGlossaryNames": [],
+    "module": "multimodal"
+  },
+  {
+    "name": "Python standard library modules",
+    "aliases": [
+      "os",
+      "sys",
+      "json",
+      "asyncio",
+      "logging",
+      "unittest",
+      "typing",
+      "pathlib",
+      "dataclasses",
+      "io",
+      "re",
+      "time"
+    ],
+    "type": "Standard library",
+    "role": "Built-in language facilities used in instructional snippets.",
+    "sourcePaths": [
+      "3 - Multimodal AI Applications/5 - Multimodal AI Tooling/Demo: Pydantic.ai.md",
+      "3 - Multimodal AI Applications/13 - Using Vision Transformers/Demo: DINOv2 Image Embeddings.md",
+      "3 - Multimodal AI Applications/11 - Gemini Vision API Basics/Solution: Image Moderation with Gemini.md",
+      "3 - Multimodal AI Applications/3 - Using Multimodal AI Technologies/Solution: Multimodal AI Showcase.md"
+    ],
+    "sourceOccurrenceCount": 132,
+    "lessonIds": [
+      "m1",
+      "m2",
+      "m3",
+      "m4",
+      "m5",
+      "m6",
+      "m7",
+      "m8"
+    ],
+    "disposition": "exclude",
+    "reason": "Built-in modules are covered by Python; not separate products or third-party library entries.",
+    "currentGuideNames": [],
+    "currentGlossaryNames": [],
+    "module": "multimodal"
+  },
+  {
+    "name": "Course helper functions and local modules",
+    "aliases": [
+      "rate_limiting",
+      "common_evaluators",
+      "multimodal_moderation",
+      "YOLOVideoObjectCounter",
+      "display_image_with_caption"
+    ],
+    "type": "Local implementation detail",
+    "role": "Exercise-defined classes/modules rather than external tools.",
+    "sourcePaths": [
+      "3 - Multimodal AI Applications/39 - Using Gradio and Pydantic AI/Demo: Building a Multimodal Gradio Chatbot with Pydantic AI.md",
+      "3 - Multimodal AI Applications/39 - Using Gradio and Pydantic AI/demo.ipynb",
+      "3 - Multimodal AI Applications/45 - OmniTrainer Multimodal Customer Service Trainer/starter/evals/utils.py",
+      "3 - Multimodal AI Applications/45 - OmniTrainer Multimodal Customer Service Trainer/starter/evals/config.py"
+    ],
+    "sourceOccurrenceCount": 59,
+    "lessonIds": [
+      "m7",
+      "m8"
+    ],
+    "disposition": "exclude",
+    "reason": "Local exercise implementations are explained through the educational system; not standalone tools.",
+    "currentGuideNames": [],
+    "currentGlossaryNames": [],
+    "module": "multimodal"
+  }
+]
