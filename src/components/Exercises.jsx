@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { scoreQuiz } from "../state.js";
 import Icon from "./Icon.jsx";
+import GlossaryText from "./GlossaryText.jsx";
 
 export function Activity({ lesson }) {
   const [selected, setSelected] = useState(null);
@@ -12,7 +13,9 @@ export function Activity({ lesson }) {
       <div className="exercise-intro">
         <span className="small-label">Practice scenario · fixed example</span>
         <h2 id={`${lesson.id}-activity-title`}>{activity.title}</h2>
-        <p>{activity.prompt}</p>
+        <p>
+          <GlossaryText text={activity.prompt} lessonId={lesson.id} />
+        </p>
         <p className="muted">
           Choose a response to explore its consequences. You can try every
           option.
@@ -44,7 +47,12 @@ export function Activity({ lesson }) {
                 ? "A sound management choice"
                 : "Consider the tradeoff"}
             </strong>
-            <p>{activity.options[selected].feedback}</p>
+            <p>
+              <GlossaryText
+                text={activity.options[selected].feedback}
+                lessonId={lesson.id}
+              />
+            </p>
           </div>
         )}
       </div>
@@ -169,7 +177,12 @@ export function Quiz({
                       {question.options[question.answer]}
                     </p>
                   )}
-                  <p>{question.explanation}</p>
+                  <p>
+                    <GlossaryText
+                      text={question.explanation}
+                      lessonId={lesson.id}
+                    />
+                  </p>
                 </div>
               )}
             </fieldset>

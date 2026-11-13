@@ -5,6 +5,7 @@ import { glossaryById } from "../glossary.js";
 export default function GlossaryEntry({
   entry,
   onRelated,
+  onNavigate,
   showDefinition = true,
 }) {
   return (
@@ -61,7 +62,9 @@ export default function GlossaryEntry({
         <ul>
           {entry.lessonIds.map((id) => (
             <li key={id}>
-              <a href={`#/lesson/${id}`}>{findLesson(id).title}</a>
+              <a href={`#/lesson/${id}`} onClick={() => onNavigate?.(id)}>
+                {findLesson(id).title}
+              </a>
             </li>
           ))}
         </ul>

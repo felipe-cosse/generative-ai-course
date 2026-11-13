@@ -6,7 +6,12 @@ import { lessons } from "../src/data/course.js";
 
 const normalize = (value) => value.toLowerCase();
 const names = (entry) =>
-  [entry.term, entry.fullName, ...entry.aliases].filter(Boolean);
+  [
+    entry.term,
+    entry.fullName,
+    ...entry.aliases,
+    ...(entry.inlineAliases || []),
+  ].filter(Boolean);
 const ids = new Set(glossary.map((entry) => entry.id));
 const lessonIds = new Set(lessons.map((lesson) => lesson.id));
 

@@ -394,6 +394,7 @@ export const glossary = [
   },
   {
     "id": "attention",
+    "inlineAliases": ["transformer attention", "attention mechanism", "attention mechanisms"],
     "term": "Attention",
     "fullName": "",
     "aliases": [
@@ -446,6 +447,7 @@ export const glossary = [
   },
   {
     "id": "training",
+    "inlineAliases": ["model training", "training a model", "training the model"],
     "term": "Training",
     "fullName": "",
     "aliases": [],
@@ -1244,6 +1246,7 @@ export const glossary = [
   },
   {
     "id": "context",
+    "inlineAliases": ["working context", "model context", "supplied context"],
     "term": "Context",
     "fullName": "",
     "aliases": [

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { findLesson, findModule, lessons } from "../data/course.js";
 import Icon from "./Icon.jsx";
 import { Activity, Quiz } from "./Exercises.jsx";
+import GlossaryText, { LessonTerms } from "./GlossaryText.jsx";
+import { useGlossary } from "./GlossaryOverlay.jsx";
 
 export function LessonContent({ lesson }) {
   return (
@@ -9,7 +11,9 @@ export function LessonContent({ lesson }) {
       <div className="article-prose">
         <section>
           <h2>{lesson.sections[0].heading}</h2>
-          <p>{lesson.sections[0].body}</p>
+          <p>
+            <GlossaryText text={lesson.sections[0].body} lessonId={lesson.id} />
+          </p>
         </section>
       </div>
       <figure className="concept-visual">
@@ -19,17 +23,23 @@ export function LessonContent({ lesson }) {
             <li key={step.label}>
               <span className="step-number">0{index + 1}</span>
               <strong>{step.label}</strong>
-              <span>{step.detail}</span>
+              <span>
+                <GlossaryText text={step.detail} lessonId={lesson.id} />
+              </span>
             </li>
           ))}
         </ol>
-        <figcaption>{lesson.visual.caption}</figcaption>
+        <figcaption>
+          <GlossaryText text={lesson.visual.caption} lessonId={lesson.id} />
+        </figcaption>
       </figure>
       <div className="article-prose">
         {lesson.sections.slice(1).map((section) => (
           <section key={section.heading}>
             <h2>{section.heading}</h2>
-            <p>{section.body}</p>
+            <p>
+              <GlossaryText text={section.body} lessonId={lesson.id} />
+            </p>
           </section>
         ))}
       </div>
@@ -39,7 +49,9 @@ export function LessonContent({ lesson }) {
           {lesson.concepts.map((concept) => (
             <div key={concept.term}>
               <dt>{concept.term}</dt>
-              <dd>{concept.explanation}</dd>
+              <dd>
+                <GlossaryText text={concept.explanation} lessonId={lesson.id} />
+              </dd>
             </div>
           ))}
         </dl>
@@ -49,12 +61,16 @@ export function LessonContent({ lesson }) {
           IN THE MEETING ROOM · FICTIONAL EXAMPLE
         </span>
         <h2>{lesson.example.title}</h2>
-        <p>{lesson.example.context}</p>
         <p>
-          <strong>The decision.</strong> {lesson.example.decision}
+          <GlossaryText text={lesson.example.context} lessonId={lesson.id} />
         </p>
         <p>
-          <strong>What to look for.</strong> {lesson.example.result}
+          <strong>The decision.</strong>{" "}
+          <GlossaryText text={lesson.example.decision} lessonId={lesson.id} />
+        </p>
+        <p>
+          <strong>What to look for.</strong>{" "}
+          <GlossaryText text={lesson.example.result} lessonId={lesson.id} />
         </p>
       </section>
       <section className="lesson-tools">
@@ -62,7 +78,9 @@ export function LessonContent({ lesson }) {
         {lesson.tools.map((tool) => (
           <p key={tool.name}>
             <strong>{tool.name}</strong>
-            <span>{tool.role}</span>
+            <span>
+              <GlossaryText text={tool.role} lessonId={lesson.id} />
+            </span>
           </p>
         ))}
         <a className="text-link" href="#/tools">
@@ -74,7 +92,9 @@ export function LessonContent({ lesson }) {
         <Icon name="spark" />
         <div>
           <h3>The manager's takeaway</h3>
-          <p>{lesson.takeaway}</p>
+          <p>
+            <GlossaryText text={lesson.takeaway} lessonId={lesson.id} />
+          </p>
         </div>
       </aside>
       <details className="sources">
@@ -111,6 +131,7 @@ export default function Lesson({
   onSaveNote,
   onScore,
 }) {
+  const { dismiss } = useGlossary();
   const [tab, setTab] = useState("learn");
   const [draft, setDraft] = useState(note);
   const [noteStatus, setNoteStatus] = useState("");
@@ -124,6 +145,7 @@ export default function Lesson({
     { id: "check", label: "Knowledge check", icon: "check" },
   ];
   const changeTab = (next) => {
+    dismiss();
     setTab(next);
     requestAnimationFrame(() =>
       document.getElementById(`tab-${next}`)?.focus(),
@@ -179,13 +201,14 @@ export default function Lesson({
                 aria-selected={tab === item.id}
                 aria-controls={`panel-${item.id}`}
                 tabIndex={tab === item.id ? 0 : -1}
-                onClick={() => setTab(item.id)}
+                onClick={() => changeTab(item.id)}
               >
                 <Icon name={item.icon} />
                 {item.label}
               </button>
             ))}
           </div>
+          <LessonTerms lessonId={id} />
           {tabs.map((item) => (
             <div
               key={item.id}
