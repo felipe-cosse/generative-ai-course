@@ -41,6 +41,7 @@ Reflections and pilot fields save automatically, and the playbook exports a plai
 
 - [Course plan and refined prompt](docs/01-course-plan.md)
 - [Interface plan](docs/02-interface-plan.md)
+- [Glossary implementation plan](docs/04-glossary-plan.md) and [217-entry candidate inventory](docs/glossary-inventory.md) — planning only; the glossary feature is not implemented yet
 - Detailed module plans: [Fundamentals](docs/modules/01-fundamentals.md), [LLMs & RAG](docs/modules/02-llms-and-rag.md), [Multimodal AI](docs/modules/03-multimodal.md)
 - [Image prompts](docs/design/image-prompts.md), [dashboard concept](docs/design/dashboard-concept.png), [lesson concept](docs/design/lesson-concept.png)
 - Final previews: [desktop](docs/design/desktop-preview.jpg), [lesson reader](docs/design/lesson-preview.jpg), [mobile](docs/design/mobile-preview.jpg)
@@ -56,3 +57,5 @@ Tool descriptions link to official documentation checked on November 13, 2026. T
 ## Delivery history
 
 Six branches capture the requested sequence: `codex/01-course-plan`, `codex/02-interface-plan`, `codex/03-content-plan`, `codex/04-course-implementation`, `codex/05-learning-interactions`, and `codex/06-verification`. Each step is committed and merged into local `main` with a merge commit. The repository has not been pushed or deployed.
+
+The glossary extension starts with the planning branch `codex/07-glossary-plan`. Its plan separates content authoring, glossary browsing, inline definitions, and verification into subsequent branches, each to be checked and merged into local `main`.
