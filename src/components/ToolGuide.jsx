@@ -58,18 +58,25 @@ export default function ToolGuide() {
             <div className="tool-name">
               <span className="small-label">{tool.category}</span>
               <h2>{tool.name}</h2>
-              <a href={tool.url} target="_blank" rel="noreferrer">
-                Official guide <Icon name="arrow" />
-                <span className="sr-only">
-                  {" "}
-                  for {tool.name} (opens in a new tab)
-                </span>
-              </a>
+              {tool.url && (
+                <a href={tool.url} target="_blank" rel="noreferrer">
+                  Official guide <Icon name="arrow" />
+                  <span className="sr-only">
+                    {" "}
+                    for {tool.name} (opens in a new tab)
+                  </span>
+                </a>
+              )}
             </div>
             <div>
               <p>
                 <GlossaryText text={tool.job} />
               </p>
+              {tool.statusNote && (
+                <p className="tool-status">
+                  <strong>Status to know.</strong> {tool.statusNote}
+                </p>
+              )}
               <p className="muted">
                 <strong>Picture this.</strong>{" "}
                 <GlossaryText text={tool.example} />

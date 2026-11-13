@@ -1011,6 +1011,13 @@ main {
 .tool-limit {
   font-size: 13px !important;
 }
+.tool-row .tool-status {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-left: 3px solid var(--coral);
+  background: #f1e8de;
+  font-size: 13px;
+}
 .empty-state {
   padding: 40px 0;
 }

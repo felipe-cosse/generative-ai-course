@@ -2,7 +2,7 @@
 
 An interactive, code-free Generative AI course for managers, adapted from the supplied local Udacity archive. Three modules, 24 lessons, original teaching prose, fictional business scenarios, tool explanations, generated illustrations, and accessible concept diagrams.
 
-Includes 24 decision activities, 48 quiz questions with explanations and retries, a searchable 10-entry tool guide, a 217-entry management glossary with lesson definitions, saved progress, lesson reflections, and a downloadable six-part pilot playbook.
+Includes 24 decision activities, 48 quiz questions with explanations and retries, a searchable 253-entry tool guide, a 217-entry management glossary with lesson definitions, saved progress, lesson reflections, and a downloadable six-part pilot playbook.
 
 ## Run locally
 
@@ -50,6 +50,7 @@ Terms in this lesson provides all associated definitions on Learn, Try it, and K
 - [Course plan and refined prompt](docs/01-course-plan.md)
 - [Interface plan](docs/02-interface-plan.md)
 - [Glossary implementation plan](docs/04-glossary-plan.md), [original candidate inventory](docs/glossary-inventory.md), and [completed coverage audit](docs/glossary-coverage.md)
+- [Tools guide review, scope, and verification](docs/06-tools-review.md)
 - Detailed module plans: [Fundamentals](docs/modules/01-fundamentals.md), [LLMs & RAG](docs/modules/02-llms-and-rag.md), [Multimodal AI](docs/modules/03-multimodal.md)
 - [Image prompts](docs/design/image-prompts.md), [dashboard concept](docs/design/dashboard-concept.png), [lesson concept](docs/design/lesson-concept.png)
 - Final previews: [desktop](docs/design/desktop-preview.jpg), [lesson reader](docs/design/lesson-preview.jpg), [mobile](docs/design/mobile-preview.jpg)
