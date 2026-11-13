@@ -45,6 +45,14 @@ In lessons, dotted-underlined terms show a short definition on hover or keyboard
 
 Terms in this lesson provides all associated definitions on Learn, Try it, and Knowledge check. Highlights appear once per approved prose field. Ambiguous ordinary words such as context, attention, and training require explicit technical phrases for automatic highlighting. Answer controls, source paths, and personal notes remain plain. Definition lookup is open-book help and never selects or submits an answer. See the [coverage audit](docs/glossary-coverage.md) and [glossary verification](docs/05-glossary-verification.md).
 
+## Tools guide
+
+Open Tool guide to explore 253 apps, model families, libraries, frameworks, platforms, databases, infrastructure components, datasets, benchmarks, protocols, and example systems identified in the course materials. Search names, package aliases, or business tasks; combine Role, Type, and Module filters. Exact product names rank ahead of broader family aliases. Clear filters restores the full alphabetical directory.
+
+Expand Business example & decision guide for a fictional scenario, a question to bring to your team, limitations, alternate names, and related lessons. Why it is in this guide explains the source context and lists archive references. Existing glossary definitions remain available in the explanatory prose, and related glossary links appear where an entry exists. Lifecycle notices stay visible even when the decision guide is collapsed.
+
+The guide includes background examples and direct project dependencies as well as hands-on tools. It does not claim to inventory every transitive dependency or every product on the market. The [review and exclusions](docs/06-tools-review.md) document the precise scope and unresolved source names.
+
 ## Plans and provenance
 
 - [Course plan and refined prompt](docs/01-course-plan.md)
@@ -63,6 +71,8 @@ Module data lives in `src/data/`. Each lesson includes its outcome, three teachi
 
 Tool descriptions link to official documentation checked on November 13, 2026. They explain roles, not pricing, rankings, or permanent availability promises. Fictional business examples and estimated lesson times are labeled accordingly.
 
+Tools live in `src/data/tools.js`; the approved identities and evidence live in `docs/tools-inventory.json`. Preserve stable IDs, keep role/type classifications consistent, verify primary links and lifecycle notes, and use valid lesson/glossary IDs. Update the inventory alongside scope changes; record exclusions rather than guessing at ambiguous names. Keep educational projects distinct from commercial products. `npm test` checks inventory parity, content, references, alias discovery, exact-name ranking, and combined filters. Set `SOURCE_ARCHIVE` to verify the referenced original files too.
+
 Glossary entries live in `src/data/glossary.js`. Preserve stable IDs when editing a definition. Keep aliases unique, use valid related-entry and lesson IDs, and include primary links for named tools. Optional `inlineAliases` restrict automatic matching without removing search aliases or lesson-list access. Review ambiguous wording in its lesson context; do not add broad synonyms just to increase highlight counts. Update the inventory and coverage audit when changing catalog scope. `npm test` checks content completeness, concept coverage, references, search behavior, Unicode boundaries, overlapping phrases, and exact preservation of lesson text.
 
 ## Delivery history
@@ -70,3 +80,5 @@ Glossary entries live in `src/data/glossary.js`. Preserve stable IDs when editin
 Six branches capture the requested sequence: `codex/01-course-plan`, `codex/02-interface-plan`, `codex/03-content-plan`, `codex/04-course-implementation`, `codex/05-learning-interactions`, and `codex/06-verification`. Each step is committed and merged into local `main` with a merge commit. The repository has not been pushed or deployed.
 
 The glossary extension follows `codex/07-glossary-plan`, `codex/08-glossary-content`, `codex/09-glossary-library`, `codex/10-inline-definitions`, and `codex/11-glossary-verification`. Each completed step is tested, committed, and merged into local `main`. See the glossary verification document for the checks and remaining browser limitations.
+
+The tools review follows `codex/12-tools-audit`, `codex/13-tools-catalog`, and `codex/14-tools-guide`, with each tested step committed and merged into local `main`. No remote push or deployment is part of this extension.
