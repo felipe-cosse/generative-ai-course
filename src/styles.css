@@ -1803,3 +1803,158 @@ main {
     align-items: start;
   }
 }
+.glossary-term {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  vertical-align: baseline;
+  text-align: inherit;
+  background: transparent;
+  text-decoration: underline dotted #668677;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  border-radius: 2px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.glossary-term:hover,
+.glossary-term:focus-visible {
+  background: var(--sage);
+  text-decoration-style: solid;
+}
+.glossary-tooltip {
+  position: fixed;
+  z-index: 110;
+  width: 350px;
+  max-width: calc(100vw - 24px);
+  max-height: calc(100dvh - 24px);
+  overflow: auto;
+  padding: 18px 20px;
+  border: 1px solid #8aa293;
+  border-radius: 9px;
+  color: var(--ink);
+  background: #fffef9;
+  box-shadow: 0 10px 32px #153f3524;
+  font-size: 14px;
+}
+.glossary-tooltip > strong {
+  display: block;
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+.glossary-tooltip-full-name {
+  display: block;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.glossary-tooltip-hint {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 10px;
+}
+.glossary-dialog {
+  width: min(720px, calc(100vw - 32px));
+  max-height: calc(100dvh - 40px);
+  padding: 28px 36px 36px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--paper);
+  color: var(--ink);
+  overscroll-behavior: contain;
+}
+.glossary-dialog::backdrop {
+  background: #102d28aa;
+}
+.glossary-dialog-top {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--paper);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.glossary-dialog-top .icon-button {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: var(--sage);
+  border-radius: 50%;
+}
+.glossary-dialog h2 {
+  margin-bottom: 20px;
+  overflow-wrap: anywhere;
+}
+.glossary-dialog h2:focus {
+  outline: none;
+}
+.lesson-terms {
+  padding: 18px 20px;
+  margin: 0 0 28px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #edf1e9;
+}
+.lesson-terms summary {
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 1.6;
+}
+.lesson-terms summary span {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 10px;
+  white-space: nowrap;
+}
+.lesson-terms p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+.lesson-terms ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+.glossary-term-chip {
+  padding: 8px 12px;
+  border: 1px solid #a6b8a9;
+  border-radius: 5px;
+  background: var(--paper);
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: left;
+}
+.glossary-term-chip:hover {
+  background: var(--sage);
+}
+@media (max-width: 760px) {
+  .glossary-dialog {
+    width: calc(100vw - 20px);
+    max-height: calc(100dvh - 20px);
+    padding: 18px 20px 26px;
+    border-radius: 12px;
+  }
+  .glossary-dialog h2 {
+    font-size: 28px;
+  }
+  .lesson-terms {
+    padding: 14px;
+  }
+  .lesson-terms summary span {
+    display: block;
+    margin-left: 18px;
+  }
+  .glossary-term-chip {
+    min-height: 44px;
+  }
+}

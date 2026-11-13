@@ -7,6 +7,7 @@ import ToolGuide from "./components/ToolGuide.jsx";
 import Playbook from "./components/Playbook.jsx";
 import Icon from "./components/Icon.jsx";
 import Glossary from "./components/Glossary.jsx";
+import GlossaryProvider from "./components/GlossaryOverlay.jsx";
 
 export default function App() {
   const [loaded] = useState(() => readState());
@@ -128,170 +129,172 @@ export default function App() {
       save({ lastLesson: lesson.id });
   }, [lesson?.id]);
   return (
-    <div className="app-shell">
-      <a
-        className="skip-link"
-        href="#main"
-        onClick={(event) => {
-          event.preventDefault();
-          setMenuOpen(false);
-          requestAnimationFrame(() => {
-            document.getElementById("main")?.focus();
-            document.getElementById("main")?.scrollIntoView();
-          });
-        }}
-      >
-        Skip to content
-      </a>
-      <div className="mobile-header">
-        <a href="#/" className="brand" onClick={onNav}>
-          Fieldwork
-        </a>
-        <button
-          id="menu-toggle"
-          className="icon-button"
-          aria-label={menuOpen ? "Close navigation" : "Open navigation"}
-          aria-expanded={menuOpen}
-          aria-controls="sidebar"
-          onClick={() => (menuOpen ? closeMenu() : setMenuOpen(true))}
+    <GlossaryProvider resetKey={hash} disabled={menuOpen}>
+      <div className="app-shell">
+        <a
+          className="skip-link"
+          href="#main"
+          onClick={(event) => {
+            event.preventDefault();
+            setMenuOpen(false);
+            requestAnimationFrame(() => {
+              document.getElementById("main")?.focus();
+              document.getElementById("main")?.scrollIntoView();
+            });
+          }}
         >
-          <Icon name={menuOpen ? "close" : "menu"} />
-        </button>
-      </div>
-      <aside id="sidebar" className={`sidebar ${menuOpen ? "is-open" : ""}`}>
-        <a href="#/" className="brand-block" onClick={onNav}>
-          <span className="brand">Fieldwork</span>
-          <span>AI for decision-makers</span>
+          Skip to content
         </a>
-        <nav aria-label="Main navigation">
-          <a
-            href="#/"
-            onClick={onNav}
-            aria-current={
-              active === "course" || active === "lesson" ? "page" : undefined
-            }
-          >
-            <Icon name="book" />
-            My learning
+        <div className="mobile-header">
+          <a href="#/" className="brand" onClick={onNav}>
+            Fieldwork
           </a>
-          <a
-            href="#/tools"
-            onClick={onNav}
-            aria-current={active === "tools" ? "page" : undefined}
+          <button
+            id="menu-toggle"
+            className="icon-button"
+            aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+            aria-expanded={menuOpen}
+            aria-controls="sidebar"
+            onClick={() => (menuOpen ? closeMenu() : setMenuOpen(true))}
           >
-            <Icon name="layers" />
-            Tool guide
-          </a>
-          <a
-            href="#/glossary"
-            onClick={onNav}
-            aria-current={active === "glossary" ? "page" : undefined}
-          >
-            <Icon name="book" />
-            Glossary
-          </a>
-          <a
-            href="#/playbook"
-            onClick={onNav}
-            aria-current={active === "playbook" ? "page" : undefined}
-          >
-            <Icon name="note" />
-            My playbook
-          </a>
-        </nav>
-        <div className="sidebar-bottom">
-          <div className="progress-block">
-            <span className="small-label">YOUR PROGRESS</span>
-            <progress
-              value={completed.length}
-              max={lessons.length}
-              aria-label="Course completion"
-            />
-            <p>
-              {completed.length} of {lessons.length} lessons complete
-            </p>
-          </div>
-          <p className="sidebar-signoff">Built for curious leaders</p>
+            <Icon name={menuOpen ? "close" : "menu"} />
+          </button>
         </div>
-      </aside>
-      {menuOpen && (
-        <button
-          className="nav-scrim"
-          tabIndex="-1"
-          aria-label="Close navigation backdrop"
-          onClick={closeMenu}
-        />
-      )}
-      <div className="workspace" inert={menuOpen}>
-        <div className="topbar">
-          <div>
-            {lesson ? (
-              <a href="#/">My learning</a>
-            ) : (
-              <span>Your workspace</span>
-            )}
-            <span className="breadcrumb-divider">/</span>
-            <strong>{title}</strong>
-          </div>
-          {lesson ? (
-            <a className="text-link" href="#/">
-              <Icon name="back" />
-              Back to course
+        <aside id="sidebar" className={`sidebar ${menuOpen ? "is-open" : ""}`}>
+          <a href="#/" className="brand-block" onClick={onNav}>
+            <span className="brand">Fieldwork</span>
+            <span>AI for decision-makers</span>
+          </a>
+          <nav aria-label="Main navigation">
+            <a
+              href="#/"
+              onClick={onNav}
+              aria-current={
+                active === "course" || active === "lesson" ? "page" : undefined
+              }
+            >
+              <Icon name="book" />
+              My learning
             </a>
-          ) : (
-            <span className="topbar-note">Self-paced learning</span>
-          )}
-        </div>
-        {storageError && (
-          <div className="storage-warning" role="status">
-            {storageError}
+            <a
+              href="#/tools"
+              onClick={onNav}
+              aria-current={active === "tools" ? "page" : undefined}
+            >
+              <Icon name="layers" />
+              Tool guide
+            </a>
+            <a
+              href="#/glossary"
+              onClick={onNav}
+              aria-current={active === "glossary" ? "page" : undefined}
+            >
+              <Icon name="book" />
+              Glossary
+            </a>
+            <a
+              href="#/playbook"
+              onClick={onNav}
+              aria-current={active === "playbook" ? "page" : undefined}
+            >
+              <Icon name="note" />
+              My playbook
+            </a>
+          </nav>
+          <div className="sidebar-bottom">
+            <div className="progress-block">
+              <span className="small-label">YOUR PROGRESS</span>
+              <progress
+                value={completed.length}
+                max={lessons.length}
+                aria-label="Course completion"
+              />
+              <p>
+                {completed.length} of {lessons.length} lessons complete
+              </p>
+            </div>
+            <p className="sidebar-signoff">Built for curious leaders</p>
           </div>
+        </aside>
+        {menuOpen && (
+          <button
+            className="nav-scrim"
+            tabIndex="-1"
+            aria-label="Close navigation backdrop"
+            onClick={closeMenu}
+          />
         )}
-        <main id="main" tabIndex="-1">
-          {active === "lesson" && (
-            <Lesson
-              id={id}
-              key={id}
-              completed={completed}
-              bestScore={state.scores[id] || 0}
-              note={state.notes[id] || ""}
-              onSaveNote={(note) =>
-                save({ notes: { ...state.notes, [id]: note } })
-              }
-              onScore={(score) =>
-                save({
-                  scores: {
-                    ...state.scores,
-                    [id]: Math.max(state.scores[id] || 0, score),
-                  },
-                })
-              }
-            />
-          )}
-          {active === "tools" && <ToolGuide />}
-          {active === "glossary" && <Glossary id={id} />}
-          {active === "playbook" && (
-            <Playbook
-              notes={state.notes}
-              brief={state.brief}
-              onSaveBrief={(brief) => save({ brief })}
-            />
-          )}
-          {active === "course" && (
-            <Course completed={completed} lastLesson={state.lastLesson} />
-          )}
-          {active === "missing" && (
-            <div className="not-found">
-              <h1>That page is off the path.</h1>
-              <p>Your course and saved progress are still here.</p>
-              <a className="button" href="#/">
-                Return to my learning
-                <Icon name="arrow" />
+        <div className="workspace" inert={menuOpen}>
+          <div className="topbar">
+            <div>
+              {lesson ? (
+                <a href="#/">My learning</a>
+              ) : (
+                <span>Your workspace</span>
+              )}
+              <span className="breadcrumb-divider">/</span>
+              <strong>{title}</strong>
+            </div>
+            {lesson ? (
+              <a className="text-link" href="#/">
+                <Icon name="back" />
+                Back to course
               </a>
+            ) : (
+              <span className="topbar-note">Self-paced learning</span>
+            )}
+          </div>
+          {storageError && (
+            <div className="storage-warning" role="status">
+              {storageError}
             </div>
           )}
-        </main>
+          <main id="main" tabIndex="-1">
+            {active === "lesson" && (
+              <Lesson
+                id={id}
+                key={id}
+                completed={completed}
+                bestScore={state.scores[id] || 0}
+                note={state.notes[id] || ""}
+                onSaveNote={(note) =>
+                  save({ notes: { ...state.notes, [id]: note } })
+                }
+                onScore={(score) =>
+                  save({
+                    scores: {
+                      ...state.scores,
+                      [id]: Math.max(state.scores[id] || 0, score),
+                    },
+                  })
+                }
+              />
+            )}
+            {active === "tools" && <ToolGuide />}
+            {active === "glossary" && <Glossary id={id} />}
+            {active === "playbook" && (
+              <Playbook
+                notes={state.notes}
+                brief={state.brief}
+                onSaveBrief={(brief) => save({ brief })}
+              />
+            )}
+            {active === "course" && (
+              <Course completed={completed} lastLesson={state.lastLesson} />
+            )}
+            {active === "missing" && (
+              <div className="not-found">
+                <h1>That page is off the path.</h1>
+                <p>Your course and saved progress are still here.</p>
+                <a className="button" href="#/">
+                  Return to my learning
+                  <Icon name="arrow" />
+                </a>
+              </div>
+            )}
+          </main>
+        </div>
       </div>
-    </div>
+    </GlossaryProvider>
   );
 }

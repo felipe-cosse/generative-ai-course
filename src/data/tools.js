@@ -14,7 +14,7 @@ export const toolGuide = [
   {
     name: "Hugging Face",
     category: "Assistants & models",
-    job: "An ecosystem for discovering models and datasets; Transformers is a library developers use for language, vision, and audio tasks.",
+    job: "An ecosystem for discovering models and datasets; Hugging Face Transformers is a library developers use for language, vision, and audio tasks.",
     example:
       "Compare model cards for intended use, language coverage, evaluation data, and licensing.",
     question: "Who owns hosting, updates, evaluation, and the license review?",

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { toolGuide } from "../data/tools.js";
 import Icon from "./Icon.jsx";
+import GlossaryText from "./GlossaryText.jsx";
 
 export default function ToolGuide() {
   const [query, setQuery] = useState("");
@@ -66,16 +67,22 @@ export default function ToolGuide() {
               </a>
             </div>
             <div>
-              <p>{tool.job}</p>
+              <p>
+                <GlossaryText text={tool.job} />
+              </p>
               <p className="muted">
-                <strong>Picture this.</strong> {tool.example}
+                <strong>Picture this.</strong>{" "}
+                <GlossaryText text={tool.example} />
               </p>
               <div className="tool-question">
                 <strong>A question to bring to your team</strong>
-                <p>{tool.question}</p>
+                <p>
+                  <GlossaryText text={tool.question} />
+                </p>
               </div>
               <p className="tool-limit">
-                <strong>Keep in mind:</strong> {tool.limit}
+                <strong>Keep in mind:</strong>{" "}
+                <GlossaryText text={tool.limit} />
               </p>
             </div>
           </article>
