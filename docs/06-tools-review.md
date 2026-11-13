@@ -15,7 +15,7 @@ Exclusions cover standard-library helpers, local exercise functions, frozen-envi
 ## Corrections and identity decisions
 
 - Keep ChatGPT, GPT model families, the OpenAI API, and its Python SDK distinct: an end-user app, a model, a service, and a client library have different operating roles.
-- Keep Hugging Face's platform, Transformers, Datasets, Tokenizers, Evaluate, PEFT, TRL, Accelerate, and Hub client distinct. The current guide combines several of these under a single ecosystem entry.
+- Keep Hugging Face's platform, Transformers, Datasets, Tokenizers, Evaluate, PEFT, TRL, Accelerate, and Hub client distinct. The original guide combined several of these under a single ecosystem entry.
 - Distinguish the Triton GPU compiler from NVIDIA Triton Inference Server.
 - Identify `pylance` in the source dependency context as **Lance**, not Microsoft's Pylance editor extension.
 - Use the original YOLO project context and distinguish model-family ideas from a particular implementation or package.
@@ -36,4 +36,16 @@ Each step is checked, committed, and merged into local `main`. No remote push is
 
 ## Audit validation
 
-The inventory has 253 unique canonical IDs. Every representative source path points to an existing file in the supplied archive, and every related lesson ID resolves in the 24-lesson course. Existing glossary tools and educational projects are accounted for through canonical names or reviewed aliases. Aliases are discovery evidence until the content step completes their editorial review.
+The inventory has 253 unique canonical IDs. Every representative source path points to an existing file in the supplied archive, and every related lesson ID resolves in the 24-lesson course. Existing glossary tools and educational projects are accounted for through canonical names or reviewed aliases.
+
+## Catalog and primary-source review
+
+All 253 entries have an original role explanation, fictional management example, decision question, specific limitation, archive context, aliases where relevant, related lessons, and representative source paths. The catalog uses nine role categories and twelve entry types. All 38 existing glossary tool/project identities have related glossary links. The two educational projects have no invented external product URL; the other 251 entries link to primary documentation, owner repositories, original research, or dataset homes.
+
+Primary references were checked on November 13, 2026. Where extraction failed, an official repository or author paper was used instead: examples include FAISS, Uvicorn, ImageNet, and IMDb. Kling's app shell and OpenAI Tokenizer expose little readable text; first-party announcements/help pages corroborated their identities and roles. These checks establish reference destinations and descriptions, not feature-by-feature trials of the products.
+
+Fourteen entries carry status notes visible before expansion. These distinguish discontinued services from archived original research implementations or maintenance-mode libraries. Key evidence includes [Sora discontinuation](https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation), [OpenAI API retirements and announced shutdowns](https://developers.openai.com/api/docs/deprecations), [TorchServe's archived repository](https://github.com/pytorch/serve), [HELM maintenance mode](https://github.com/stanford-crfm/helm), [TorchAudio maintenance](https://docs.pytorch.org/audio/stable/index.html), and [wheel's changed build role](https://wheel.readthedocs.io/en/stable/). Downloadable Whisper models are explicitly distinguished from the hosted whisper-1 API lifecycle. Original BERT, ALBERT, ELECTRA, GPT-2, TimeSformer, and nest-asyncio repository notes do not imply that every downstream implementation has retired.
+
+No prices, model rankings, unsupported performance promises, or installation instructions were added. PostgreSQL/MySQL vector-search descriptions depend on the deployed implementation. Case studies do not inherit unsupported camera-access or vehicle-control claims from the source material.
+
+Step 13 validation: 48 tests passed with the original archive available, including exact inventory coverage, all glossary tool/project links, safe source paths, and required lifecycle notes. Production build passed. An isolated headless Chrome check rendered all 253 entries, confirmed all 14 visible lifecycle notices, and checked the historical Sora description and the educational project's absent external URL. No browser console errors occurred. A separate content review corrected SeC's type to Framework.
