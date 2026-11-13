@@ -1965,3 +1965,105 @@ main {
     min-height: 44px;
   }
 }
+
+.tool-directory-filters {
+  flex-wrap: wrap;
+}
+.tool-directory-filters .search-field {
+  flex: 1 1 100%;
+}
+.tool-directory-filters .category-filter {
+  flex: 1 1 180px;
+  min-width: 0;
+}
+.tool-directory-filters select {
+  width: 100%;
+}
+.tool-results-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+.tool-results-heading button {
+  background: transparent;
+  min-height: 44px;
+}
+.tool-kind {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0 0 14px;
+  color: var(--muted);
+}
+.tool-name h2 {
+  overflow-wrap: anywhere;
+}
+.tool-name .tool-glossary-link {
+  display: block;
+  margin-top: 15px;
+}
+.tool-decision {
+  margin-top: 18px;
+}
+.tool-decision > summary {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+.tool-description .tool-aliases {
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.tool-course-context {
+  margin-top: 22px;
+}
+.tool-course-context h3 {
+  font-size: 20px;
+}
+.tool-course-context ul {
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.tool-course-context li {
+  margin: 8px 0;
+}
+.tool-course-context a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.tool-source-context {
+  margin-top: 20px;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.tool-source-context > summary {
+  cursor: pointer;
+}
+.tool-source-context p,
+.tool-source-context li {
+  font-size: 12px;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+.tool-source-context ul {
+  padding-left: 18px;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 760px) {
+  .tool-directory-filters .category-filter {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+  .tool-directory-filters .category-filter select {
+    flex: 1;
+    min-width: 0;
+  }
+  .tool-results-heading {
+    align-items: start;
+  }
+}

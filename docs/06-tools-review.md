@@ -49,3 +49,31 @@ Fourteen entries carry status notes visible before expansion. These distinguish 
 No prices, model rankings, unsupported performance promises, or installation instructions were added. PostgreSQL/MySQL vector-search descriptions depend on the deployed implementation. Case studies do not inherit unsupported camera-access or vehicle-control claims from the source material.
 
 Step 13 validation: 48 tests passed with the original archive available, including exact inventory coverage, all glossary tool/project links, safe source paths, and required lifecycle notes. Production build passed. An isolated headless Chrome check rendered all 253 entries, confirmed all 14 visible lifecycle notices, and checked the historical Sora description and the educational project's absent external URL. No browser console errors occurred. A separate content review corrected SeC's type to Framework.
+
+## Directory delivery and final verification
+
+The directory provides name/alias/task search, combined role/type/module filters, alphabetical browsing, result counts, and empty-state recovery. Its 216 aliases are searchable, and exact canonical names rank ahead of family aliases. Native expandable sections keep management scenarios and source evidence available without making every row long. Existing glossary previews/dialogs are reused; changing filters or closing an expanded decision guide dismisses stale previews. No new dependencies, storage keys, or backend services were introduced.
+
+Final automated result: **51 tests passed, zero failures or skips**, using `SOURCE_ARCHIVE='/Users/felipecosse/Docker/Udacity Generative AI' npm test`. Production build and whitespace checks passed. The JavaScript bundle is about 289 kB gzip and CSS 6.4 kB gzip. Vite's existing non-blocking combined-chunk size advisory remains; this task adds about 86 kB gzip to the JavaScript bundle.
+
+Browser environment: the production preview at `http://127.0.0.1:4173/`, installed Chrome 157 driven by the existing Playwright installation, isolated temporary profiles. Desktop 1440 × 1000, mobile 375 × 812 with touch enabled, and narrow 320 × 640 reflow. Desktop and mobile screenshots were opened for visual inspection against the existing Fieldwork design: ivory surfaces, green text, serif headings, divided rows, and labeled controls remain consistent.
+
+| Check                                                                                  | Result |
+| -------------------------------------------------------------------------------------- | ------ |
+| All 253 entries and 14 collapsed lifecycle notices                                     | Pass   |
+| Exact product/alias ranking: cv2, pylance, GPT-2, Triton, Triton Inference             | Pass   |
+| Combined role/type/module/text filters, empty results, full reset                      | Pass   |
+| Keyboard Enter/Space expansion, source context, related lessons/glossary links         | Pass   |
+| No invented official URL for educational projects                                      | Pass   |
+| Glossary hover/focus, dialog, Escape, focus return, filter/section cleanup             | Pass   |
+| Mobile touch lookup, dialog closing, navigation, filter controls, source-path wrapping | Pass   |
+| No horizontal overflow at 375px or 320px, no nested interactive controls               | Pass   |
+| All 24 lesson term lists and all 48 correct quiz answers                               | Pass   |
+| Quiz selection, activity choice, reflection and saved score preservation               | Pass   |
+| Production page identity, no framework error overlay, no console errors/warnings       | Pass   |
+
+The initial directory became ready in approximately 304 ms in one local production run. This is an observation on this machine, not a cross-device performance guarantee. Native details and the existing memoized glossary renderer were sufficient; no virtualization or extra rendering dependency was needed.
+
+Browser scripts and evidence were captured outside the repository: `/tmp/fieldwork-tools-catalog-check.mjs`, `/tmp/fieldwork-tools-check.mjs`, `/tmp/fieldwork-tools-regression.mjs`, `/tmp/fieldwork-tools-desktop.png`, and `/tmp/fieldwork-tools-mobile.png`.
+
+Remaining limits: Safari, Firefox, physical mobile hardware, actual browser zoom, and real screen-reader speech/navigation were not checked in this extension. Product links were researched, but the 251 external products/research resources were not installed or individually acceptance-tested; no commercial license audit or procurement endorsement is implied. The source inventory excludes raw videos/subtitles and transitive-only environment packages as described above. No remote push or deployment was performed.
