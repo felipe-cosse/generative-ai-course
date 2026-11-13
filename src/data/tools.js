@@ -1,12 +1,119 @@
 export const toolGuide = [
-  { name: 'Gemini', category: 'Assistants & models', job: 'A model family for working with language and multimodal inputs such as images. A business application adds instructions, data access, and review.', example: 'Ask for a draft description of visible package damage, then have a colleague inspect the photo.', question: 'Which inputs does our chosen model support, and how will we check its answers?', limit: 'An image interpretation can miss small details or infer something that is not visible.', url: 'https://ai.google.dev/gemini-api/docs/image-understanding' },
-  { name: 'Hugging Face', category: 'Assistants & models', job: 'An ecosystem for discovering models and datasets; Transformers is a library developers use for language, vision, and audio tasks.', example: 'Compare model cards for intended use, language coverage, evaluation data, and licensing.', question: 'Who owns hosting, updates, evaluation, and the license review?', limit: 'A downloadable model is not automatically a production-ready business application.', url: 'https://huggingface.co/docs/transformers/en/index' },
-  { name: 'Chroma', category: 'Knowledge & search', job: 'Stores documents and their numerical representations so an application can retrieve related information for a question.', example: 'Find relevant passages in approved policy documents before a model drafts a reply.', question: 'How do we keep documents current and enforce each user’s access?', limit: 'A similar passage may be outdated or wrong for the question. Retrieval is not verification.', url: 'https://docs.trychroma.com/docs/overview/introduction' },
-  { name: 'CLIP', category: 'Images & audio', job: 'Relates images and text in a shared representation, useful for finding or comparing visual content.', example: 'Search a product catalog with a phrase such as “red travel bag.”', question: 'Do the results match real product identities and the conditions in our catalog?', limit: 'Similarity does not prove identity, availability, or a factual attribute.', url: 'https://github.com/openai/CLIP' },
-  { name: 'Whisper', category: 'Images & audio', job: 'A speech-recognition model used to turn audio into text. Transcripts can then support search and review.', example: 'Create a draft transcript of a consented training conversation for a reviewer.', question: 'How often does it miss names, numbers, accents, or overlapping speakers?', limit: 'A plausible transcript can contain omissions or invented text. Important statements need audio review.', url: 'https://github.com/openai/whisper' },
-  { name: 'Video-generation tools', category: 'Images & audio', job: 'Generate video drafts from a creative brief or other supported inputs. The source exercises use Veo as an example; specific models and availability change.', example: 'Explore a storyboard for an internal campaign before commissioning production.', question: 'Do we have rights to the inputs, and who checks claims, continuity, and accessibility?', limit: 'A generated scene is not evidence of a real event. Verify current model availability separately.', url: 'https://ai.google.dev/gemini-api/docs/video' },
-  { name: 'Pydantic AI', category: 'Building & operating', job: 'A developer framework for coordinating model interactions and structured outputs. Managers specify what a useful result must contain.', example: 'Require an issue category, supporting evidence, and a review flag in a support workflow.', question: 'What happens when an output is incomplete, unsupported, or unsafe to act on?', limit: 'A correctly structured result can still contain incorrect information.', url: 'https://ai.pydantic.dev/' },
-  { name: 'Gradio', category: 'Building & operating', job: 'Helps teams build web interfaces around models so people can try workflows and provide feedback.', example: 'Let support staff test a photo-and-text triage prototype with approved sample cases.', question: 'What separates this demo from a secure, supported service?', limit: 'A working interface does not establish permissions, reliability, capacity, or support ownership.', url: 'https://www.gradio.app/' },
-  { name: 'Ragas', category: 'Evaluation', job: 'Provides evaluation methods for AI applications, including different aspects of retrieval and generated answers.', example: 'Investigate whether a knowledge assistant finds useful passages and stays supported by them.', question: 'Which metric measures our failure mode, and how does it compare with human review?', limit: 'A metric is a signal, not a universal launch threshold. Some evaluations use model judges.', url: 'https://docs.ragas.io/en/stable/' },
-  { name: 'Arize Phoenix', category: 'Evaluation', job: 'Helps teams trace model workflows, inspect runs, and evaluate behavior when building and operating applications.', example: 'Follow a failed answer from the user question through retrieved passages to the final response.', question: 'Which failures trigger action, and what sensitive information is recorded?', limit: 'Monitoring only helps when somebody owns the response and logs protect sensitive data.', url: 'https://arize.com/docs/phoenix' },
+  {
+    name: "Gemini",
+    category: "Assistants & models",
+    job: "A model family for working with language and multimodal inputs such as images. A business application adds instructions, data access, and review.",
+    example:
+      "Ask for a draft description of visible package damage, then have a colleague inspect the photo.",
+    question:
+      "Which inputs does our chosen model support, and how will we check its answers?",
+    limit:
+      "An image interpretation can miss small details or infer something that is not visible.",
+    url: "https://ai.google.dev/gemini-api/docs/image-understanding",
+  },
+  {
+    name: "Hugging Face",
+    category: "Assistants & models",
+    job: "An ecosystem for discovering models and datasets; Transformers is a library developers use for language, vision, and audio tasks.",
+    example:
+      "Compare model cards for intended use, language coverage, evaluation data, and licensing.",
+    question: "Who owns hosting, updates, evaluation, and the license review?",
+    limit:
+      "A downloadable model is not automatically a production-ready business application.",
+    url: "https://huggingface.co/docs/transformers/en/index",
+  },
+  {
+    name: "Chroma",
+    category: "Knowledge & search",
+    job: "Stores documents and their numerical representations so an application can retrieve related information for a question.",
+    example:
+      "Find relevant passages in approved policy documents before a model drafts a reply.",
+    question:
+      "How do we keep documents current and enforce each user’s access?",
+    limit:
+      "A similar passage may be outdated or wrong for the question. Retrieval is not verification.",
+    url: "https://docs.trychroma.com/docs/overview/introduction",
+  },
+  {
+    name: "CLIP",
+    category: "Images & audio",
+    job: "Relates images and text in a shared representation, useful for finding or comparing visual content.",
+    example: "Search a product catalog with a phrase such as “red travel bag.”",
+    question:
+      "Do the results match real product identities and the conditions in our catalog?",
+    limit:
+      "Similarity does not prove identity, availability, or a factual attribute.",
+    url: "https://github.com/openai/CLIP",
+  },
+  {
+    name: "Whisper",
+    category: "Images & audio",
+    job: "A speech-recognition model used to turn audio into text. Transcripts can then support search and review.",
+    example:
+      "Create a draft transcript of a consented training conversation for a reviewer.",
+    question:
+      "How often does it miss names, numbers, accents, or overlapping speakers?",
+    limit:
+      "A plausible transcript can contain omissions or invented text. Important statements need audio review.",
+    url: "https://github.com/openai/whisper",
+  },
+  {
+    name: "Video-generation tools",
+    category: "Images & audio",
+    job: "Generate video drafts from a creative brief or other supported inputs. The source exercises use Veo as an example; specific models and availability change.",
+    example:
+      "Explore a storyboard for an internal campaign before commissioning production.",
+    question:
+      "Do we have rights to the inputs, and who checks claims, continuity, and accessibility?",
+    limit:
+      "A generated scene is not evidence of a real event. Verify current model availability separately.",
+    url: "https://ai.google.dev/gemini-api/docs/video",
+  },
+  {
+    name: "Pydantic AI",
+    category: "Building & operating",
+    job: "A developer framework for coordinating model interactions and structured outputs. Managers specify what a useful result must contain.",
+    example:
+      "Require an issue category, supporting evidence, and a review flag in a support workflow.",
+    question:
+      "What happens when an output is incomplete, unsupported, or unsafe to act on?",
+    limit:
+      "A correctly structured result can still contain incorrect information.",
+    url: "https://ai.pydantic.dev/",
+  },
+  {
+    name: "Gradio",
+    category: "Building & operating",
+    job: "Helps teams build web interfaces around models so people can try workflows and provide feedback.",
+    example:
+      "Let support staff test a photo-and-text triage prototype with approved sample cases.",
+    question: "What separates this demo from a secure, supported service?",
+    limit:
+      "A working interface does not establish permissions, reliability, capacity, or support ownership.",
+    url: "https://www.gradio.app/",
+  },
+  {
+    name: "Ragas",
+    category: "Evaluation",
+    job: "Provides evaluation methods for AI applications, including different aspects of retrieval and generated answers.",
+    example:
+      "Investigate whether a knowledge assistant finds useful passages and stays supported by them.",
+    question:
+      "Which metric measures our failure mode, and how does it compare with human review?",
+    limit:
+      "A metric is a signal, not a universal launch threshold. Some evaluations use model judges.",
+    url: "https://docs.ragas.io/en/stable/",
+  },
+  {
+    name: "Arize Phoenix",
+    category: "Evaluation",
+    job: "Helps teams trace model workflows, inspect runs, and evaluate behavior when building and operating applications.",
+    example:
+      "Follow a failed answer from the user question through retrieved passages to the final response.",
+    question:
+      "Which failures trigger action, and what sensitive information is recorded?",
+    limit:
+      "Monitoring only helps when somebody owns the response and logs protect sensitive data.",
+    url: "https://arize.com/docs/phoenix",
+  },
 ];

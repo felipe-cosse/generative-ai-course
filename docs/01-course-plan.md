@@ -12,11 +12,11 @@ For managers of teams, products, operations, and change. No programming or machi
 
 The source contains 82 numbered sections: 19 Fundamentals sections (number 3 is absent), 18 LLM/RAG sections, and 45 Multimodal sections. Consolidate adjacent concepts and engineering labs into 24 substantial lessons, eight per main module. Preserve complete source-folder coverage in the detailed plans. Reading and exercise times are editorial estimates, not measured completion data.
 
-| Module | Eight management lessons, in order | Practical outcome |
-|---|---|---|
-| 1. Generative AI fundamentals | What generative AI changes; One model, many jobs; How a model learns and generates; Evidence before enthusiasm; Accountable owners; Give AI a useful brief; Prompt, retrieve, or fine-tune; Reward the right outcome | Choose a useful, reviewable first pilot and define evidence of success |
-| 2. LLMs and retrieval-augmented generation | What a chatbot knows; Brief the model; Improve prompts with evidence; Tokens and search by meaning; Model economics; Business knowledge and retrieval; Inspectable answers; Evaluate a knowledge assistant | Specify a grounded knowledge assistant, its access boundaries, and a go/no-go review |
-| 3. Multimodal AI applications | See the whole picture; Useful image decisions; Understand and create visuals; Make sound searchable; Govern voice intelligence; Important video moments; Creative brief to pilot; Launch and monitor responsibly | Design a multimodal pilot with clear inputs, consent, review, monitoring, and rollback |
+| Module                                     | Eight management lessons, in order                                                                                                                                                                                   | Practical outcome                                                                      |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| 1. Generative AI fundamentals              | What generative AI changes; One model, many jobs; How a model learns and generates; Evidence before enthusiasm; Accountable owners; Give AI a useful brief; Prompt, retrieve, or fine-tune; Reward the right outcome | Choose a useful, reviewable first pilot and define evidence of success                 |
+| 2. LLMs and retrieval-augmented generation | What a chatbot knows; Brief the model; Improve prompts with evidence; Tokens and search by meaning; Model economics; Business knowledge and retrieval; Inspectable answers; Evaluate a knowledge assistant           | Specify a grounded knowledge assistant, its access boundaries, and a go/no-go review   |
+| 3. Multimodal AI applications              | See the whole picture; Useful image decisions; Understand and create visuals; Make sound searchable; Govern voice intelligence; Important video moments; Creative brief to pilot; Launch and monitor responsibly     | Design a multimodal pilot with clear inputs, consent, review, monitoring, and rollback |
 
 ## Learning pattern
 

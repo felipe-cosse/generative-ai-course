@@ -10,26 +10,26 @@ Correct several source simplifications in the adaptation: RAG reduces but does n
 
 ## Complete source-folder inventory
 
-| Source folder | Management lesson |
-|---|---|
-| 1 - Introduction to LLMs and Retrival Augmented Generation (RAG) | 1 |
-| 2 - The Large Language Model Landscape | 1 |
-| 3 - Implementing a Chatbot with an LLM | 1 |
-| 4 - LLM Prompting & Inference | 2 |
-| 5 - Applied Prompting and Inference | 2 |
-| 6 - Prompt Instruction Refinement | 3 |
-| 7 - Applying Prompt Instruction Refinement with Python | 3 |
-| 8 - Tokens, Embeddings, and Vector Search | 4 |
-| 9 - Implementing Tokens, Embeddings, and Vector Search | 4 |
-| 10 - Strategic Model Selection & Economics | 5 |
-| 11 - Applying Model Selection and Economics | 5 |
-| 12 - Retrieval Augmented Generation (RAG) Workflow | 6 |
-| 13 - Semantic Search with Vector Databases for RAG | 6 |
-| 14 - Prompt Engineering for RAG Synthesis | 7 |
-| 15 - Implementing RAG with Vector Databases | 7 |
-| 16 - Evaluating RAG Systems | 8 |
-| 17 - RAG Evaluation Implementation | 8 |
-| 18 - Project: NASA Mission Intelligence: Developing a RAG-Based Chat System | 8 |
+| Source folder                                                               | Management lesson |
+| --------------------------------------------------------------------------- | ----------------- |
+| 1 - Introduction to LLMs and Retrival Augmented Generation (RAG)            | 1                 |
+| 2 - The Large Language Model Landscape                                      | 1                 |
+| 3 - Implementing a Chatbot with an LLM                                      | 1                 |
+| 4 - LLM Prompting & Inference                                               | 2                 |
+| 5 - Applied Prompting and Inference                                         | 2                 |
+| 6 - Prompt Instruction Refinement                                           | 3                 |
+| 7 - Applying Prompt Instruction Refinement with Python                      | 3                 |
+| 8 - Tokens, Embeddings, and Vector Search                                   | 4                 |
+| 9 - Implementing Tokens, Embeddings, and Vector Search                      | 4                 |
+| 10 - Strategic Model Selection & Economics                                  | 5                 |
+| 11 - Applying Model Selection and Economics                                 | 5                 |
+| 12 - Retrieval Augmented Generation (RAG) Workflow                          | 6                 |
+| 13 - Semantic Search with Vector Databases for RAG                          | 6                 |
+| 14 - Prompt Engineering for RAG Synthesis                                   | 7                 |
+| 15 - Implementing RAG with Vector Databases                                 | 7                 |
+| 16 - Evaluating RAG Systems                                                 | 8                 |
+| 17 - RAG Evaluation Implementation                                          | 8                 |
+| 18 - Project: NASA Mission Intelligence: Developing a RAG-Based Chat System | 8                 |
 
 ## Lesson 1 — What a business chatbot actually knows
 
@@ -52,6 +52,7 @@ Correct several source simplifications in the adaptation: RAG reduces but does n
 **Quiz 2:** After a long conversation the bot forgets the product. What is the most relevant question for the team? A. How is relevant conversation context retained? B. Can we make the answer more creative? C. Can we hide the prior messages from the user? **Answer: A.** Context selection and summarization affect what the model receives; a longer visible chat does not guarantee all history is included.
 
 **Exact relative source Markdown:**
+
 - `1 - Introduction to LLMs and Retrival Augmented Generation (RAG)/Course Outcomes.md`
 - `2 - The Large Language Model Landscape/The LLM Landscape.md`
 - `2 - The Large Language Model Landscape/The RAG Architecture: Key to Trust.md`
@@ -79,6 +80,7 @@ Correct several source simplifications in the adaptation: RAG reduces but does n
 **Quiz 2:** A team lowers temperature for a policy assistant. What can it reasonably expect? A. Less output variation, with accuracy still requiring checks. B. Guaranteed factual answers. C. Automatic access to the latest policy. **Answer: A.** Sampling affects variation, not source access or factual guarantees.
 
 **Exact relative source Markdown:**
+
 - `4 - LLM Prompting & Inference/What Is a Prompt?.md`
 - `4 - LLM Prompting & Inference/Prompt Templating.md`
 - `4 - LLM Prompting & Inference/Building Your Prompt Engineer Toolkit.md`
@@ -107,6 +109,7 @@ Correct several source simplifications in the adaptation: RAG reduces but does n
 **Quiz 2:** A refined prompt gets all five familiar examples right. What evidence is still missing? A. A more persuasive title. B. A longer role description. C. Performance on unseen and difficult cases. **Answer: C.** Fitting familiar examples does not establish reliable behavior across actual work.
 
 **Exact relative source Markdown:**
+
 - `6 - Prompt Instruction Refinement/Prompt Instruction Refinement.md`
 - `6 - Prompt Instruction Refinement/Prompt Instruction Refinement Best Practices.md`
 - `6 - Prompt Instruction Refinement/Examples: Prompt Instruction Refinement.md`
@@ -134,6 +137,7 @@ Correct several source simplifications in the adaptation: RAG reduces but does n
 **Quiz 2:** Two passages receive a high similarity score. What does that establish? A. Both are current and correct. B. The user may access both. C. Their representations are similar; truth and access need separate checks. **Answer: C.** Similarity is useful for retrieval, not a correctness or authorization guarantee.
 
 **Exact relative source Markdown:**
+
 - `8 - Tokens, Embeddings, and Vector Search/Tokenization.md`
 - `8 - Tokens, Embeddings, and Vector Search/Embeddings.md`
 - `8 - Tokens, Embeddings, and Vector Search/Vectors and Vector Search.md`
@@ -161,6 +165,7 @@ Correct several source simplifications in the adaptation: RAG reduces but does n
 **Quiz 2:** A vendor tops a public benchmark. What should the manager do before selection? A. Test it on representative tasks and required data controls. B. Skip the pilot. C. Assume it is best for every workflow. **Answer: A.** A broad benchmark does not establish fit for the organization's task, constraints, or risk tolerance.
 
 **Exact relative source Markdown:**
+
 - `10 - Strategic Model Selection & Economics/Model Selection.md`
 - `10 - Strategic Model Selection & Economics/Metrics for Evaluation.md`
 - `10 - Strategic Model Selection & Economics/Model Economics.md`
@@ -189,6 +194,7 @@ Correct several source simplifications in the adaptation: RAG reduces but does n
 **Quiz 2:** HR and public documents share an index. Where must access control be enforced? A. Only in a sentence asking the model to keep secrets. B. In the application and retrieval authorization controls. C. Only after a user complains. **Answer: B.** Prompts are not a substitute for enforcing which source material a user is allowed to retrieve.
 
 **Exact relative source Markdown:**
+
 - `12 - Retrieval Augmented Generation (RAG) Workflow/RAG Workflow.md`
 - `12 - Retrieval Augmented Generation (RAG) Workflow/RAG Workflow Concepts.md`
 - `13 - Semantic Search with Vector Databases for RAG/Vector Databases.md`
@@ -216,6 +222,7 @@ Correct several source simplifications in the adaptation: RAG reduces but does n
 **Quiz 2:** The retrieved documents disagree on eligibility and neither is clearly authoritative. What should the assistant do? A. Invent a compromise. B. Report the conflict and route to an owner. C. Choose whichever passage is longer. **Answer: B.** The system should expose unresolved evidence rather than silently manufacture a policy.
 
 **Exact relative source Markdown:**
+
 - `14 - Prompt Engineering for RAG Synthesis/Prompt Engineering for RAG.md`
 - `14 - Prompt Engineering for RAG Synthesis/Prompting Patterns for RAG.md`
 - `14 - Prompt Engineering for RAG Synthesis/RAG Context and Citations.md`
@@ -244,6 +251,7 @@ Correct several source simplifications in the adaptation: RAG reduces but does n
 **Quiz 2:** A pilot averages 95% helpful answers but exposes restricted documents in one test. What is the sound launch decision? A. Launch because the average is high. B. Remove that test from the score. C. Fix authorization and retest before broad rollout. **Answer: C.** A high average cannot compensate for a critical access-control failure.
 
 **Exact relative source Markdown:**
+
 - `16 - Evaluating RAG Systems/RAG Evaluation.md`
 - `16 - Evaluating RAG Systems/Evaluating the Retriever.md`
 - `16 - Evaluating RAG Systems/Evaluating the Generator.md`
